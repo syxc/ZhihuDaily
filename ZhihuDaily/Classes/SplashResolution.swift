@@ -12,16 +12,19 @@ import Foundation
  * 图像分辨率
  */
 enum SplashResolution: String {
-  
-  case _320 = "320*432", _480 = "480*728", _720 = "720*1184", _1080 = "1080*1776"
-  
+
+  case _320 = "320*432"
+  case _480 = "480*728"
+  case _720 = "720*1184"
+  case _1080 = "1080*1776"
+
   static let allValues = [_320, _480, _720, _1080]
-  
+
   var description: String {
     return "\(rawValue)"
   }
-  
+
   var debugDescription: String {
     return "SplashResolution (rawValue: \(rawValue))"
-  }  
+  }
 }

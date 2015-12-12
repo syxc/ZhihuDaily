@@ -11,12 +11,13 @@ import Alamofire
 
 
 class RootViewController: UIViewController {
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
-    
-    AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
+
+    AppClient.fetchSplashScreen(SplashResolution._1080) {
+      (data, error) -> Void in
       if error != nil {
         print("error: \(error)")
       } else {
@@ -27,19 +28,19 @@ class RootViewController: UIViewController {
         }
       }
     }
-    
+
   }
-  
+
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
-  
+
+
   /*
   // MARK: - Navigation
   
@@ -49,5 +50,5 @@ class RootViewController: UIViewController {
   // Pass the selected object to the new view controller.
   }
   */
-  
+
 }

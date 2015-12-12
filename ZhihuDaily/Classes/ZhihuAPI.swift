@@ -12,7 +12,7 @@ import Foundation
 typealias Callback = (AnyObject?, NSError?) -> Void
 
 protocol ZhihuAPI {
-  
+
   /**
    获取启动图片信息
    
@@ -25,11 +25,11 @@ protocol ZhihuAPI {
    - parameter resolution: 图像分辨率
    - parameter callback: 回调
    */
-  func fetchSplashScreen(resolution: SplashResolution?, callback: Callback)
-  
+  static func fetchSplashScreen(resolution: SplashResolution?, callback: Callback)
+
   /**
    获取最新消息
    */
-  func fetchLatestNews()
-  
+  static func fetchLatestNews()
+
 }

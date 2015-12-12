@@ -11,20 +11,20 @@ import UIKit
 
 /// 启动界面图像
 class Splash: NSObject {
-  
+
   /// 供显示的图片版权信息
   let text: String
-  
+
   /// 图像的 URL
   let image: String
-  
+
   init(text: String?, image: String?) {
     self.text = text ?? ""
     self.image = image ?? ""
   }
-  
+
   override var description: String {
     return "Text: \(text), Image: \(image)\n"
   }
-  
+
 }

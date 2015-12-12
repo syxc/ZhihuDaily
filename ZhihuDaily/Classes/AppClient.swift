@@ -10,26 +10,15 @@ import Alamofire
 import Foundation
 
 
-class AppClient: ZhihuAPI {
-  
-  init() {
-    
-  }
-  
-  class var instance: AppClient {
-    struct Static {
-      static let instance = AppClient()
-    }
-    return Static.instance
-  }
-  
-  
+struct AppClient: ZhihuAPI {
+
   // MARK: - ZhihuAPI methods
-  
-  func fetchSplashScreen(resolution: SplashResolution?, callback: Callback) -> Void {
+
+  static func fetchSplashScreen(resolution: SplashResolution?, callback: Callback) -> Void {
     let url = String(format: api_fetch_splashScreen, (resolution?.description)!)
     print("url: \(url)")
-    Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+    Alamofire.request(.GET, url).responseJSON {
+      (response) -> Void in
       // fail
       if let error = response.result.error {
         callback(nil, error)
@@ -41,9 +30,9 @@ class AppClient: ZhihuAPI {
       }
     }
   }
-  
-  func fetchLatestNews() {
-    
+
+  static func fetchLatestNews() {
+
   }
-  
+
 }
