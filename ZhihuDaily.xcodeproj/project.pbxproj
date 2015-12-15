@@ -17,7 +17,7 @@
 		4C475E6C1C12E3C300D7CF17 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6B1C12E3C300D7CF17 /* AppConstants.swift */; };
 		4C475E6E1C12E58E00D7CF17 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6D1C12E58E00D7CF17 /* Config.swift */; };
 		4C475E701C12E9A900D7CF17 /* SplashResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */; };
-		4C7F86691C20754800D7FAA3 /* ZhihuDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F86681C20754800D7FAA3 /* ZhihuDaily.swift */; };
+		4C7F86691C20754800D7FAA3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F86681C20754800D7FAA3 /* API.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -58,7 +58,7 @@
 		4C475E6B1C12E3C300D7CF17 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4C475E6D1C12E58E00D7CF17 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashResolution.swift; sourceTree = "<group>"; };
-		4C7F86681C20754800D7FAA3 /* ZhihuDaily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhihuDaily.swift; sourceTree = "<group>"; };
+		4C7F86681C20754800D7FAA3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 			children = (
 				4C475E671C12E1E600D7CF17 /* ZhihuAPI.swift */,
 				4C475E691C12E2EB00D7CF17 /* AppClient.swift */,
-				4C7F86681C20754800D7FAA3 /* ZhihuDaily.swift */,
+				4C7F86681C20754800D7FAA3 /* API.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -456,7 +456,7 @@
 				4CB6F09A1C12053300E7EEA3 /* RootViewController.swift in Sources */,
 				4CB6F0A41C1209F800E7EEA3 /* Splash.swift in Sources */,
 				4CB6F0951C12049D00E7EEA3 /* AppDelegate.swift in Sources */,
-				4C7F86691C20754800D7FAA3 /* ZhihuDaily.swift in Sources */,
+				4C7F86691C20754800D7FAA3 /* API.swift in Sources */,
 				4C475E701C12E9A900D7CF17 /* SplashResolution.swift in Sources */,
 				4C475E6C1C12E3C300D7CF17 /* AppConstants.swift in Sources */,
 				4C475E6E1C12E58E00D7CF17 /* Config.swift in Sources */,

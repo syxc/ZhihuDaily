@@ -17,17 +17,17 @@ private extension String {
   }
 }
 
-// MARK: - ZhihuAPI URL
+// MARK: - ZhihuAPI URL Router
 
 /* 参考 https://github.com/izzyleung/ZhihuDailyPurify/wiki/知乎日报-API-分析 */
 
 /**
-ZhihuAPI URL
+ZhihuAPI URL Router
 
 - SplashScreen: 启动界面图像获取
 - LatestNews:   最新消息
 */
-public enum ZhihuDaily: String {
+public enum API: String {
   
   /// 启动界面图像获取
   case SplashScreen
@@ -38,7 +38,7 @@ public enum ZhihuDaily: String {
 }
 
 
-extension ZhihuDaily {
+extension API {
   
   var baseURL: NSURL {
     return NSURL(string: "http://news-at.zhihu.com/api/4")!
@@ -47,14 +47,14 @@ extension ZhihuDaily {
   var description: String {
     switch self {
     case .SplashScreen:
-      return url("/start-image/%@")
+      return router("/start-image/%@")
     case .LatestNews:
-      return url("/news/latest")
+      return router("/news/latest")
     }
   }
   
   var debugDescription: String {
-    return "ZhihuDaily (rawValue: \(rawValue))"
+    return "API (rawValue: \(rawValue))"
   }
   
   var raw: String {
@@ -62,13 +62,13 @@ extension ZhihuDaily {
   }
   
   /**
-   URL拼接
+   URL路由
    
    - parameter path: sub url
    
    - returns: absolute url
    */
-  private func url(path: String) -> String {
+  private func router(path: String) -> String {
     return baseURL.URLByAppendingPathComponent(path as String).absoluteString
   }
   
