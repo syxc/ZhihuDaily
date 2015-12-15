@@ -15,7 +15,7 @@ struct AppClient: ZhihuAPI {
   // MARK: - ZhihuAPI methods
 
   static func fetchSplashScreen(resolution: SplashResolution?, callback: Callback) -> Void {
-    let url = String(format: api_fetch_splashScreen, (resolution?.description)!)
+    let url = String(format: ZhihuDaily.SplashScreen.raw, (resolution?.raw)!)
     print("url: \(url)")
     Alamofire.request(.GET, url).responseJSON {
       (response) -> Void in
