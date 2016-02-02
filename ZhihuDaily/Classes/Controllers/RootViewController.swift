@@ -10,11 +10,13 @@ import UIKit
 import Alamofire
 
 
-class RootViewController: UIViewController {
+class RootViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
+    
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: Selector("searchTap"))
     
     AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
       if error != nil {
@@ -27,7 +29,6 @@ class RootViewController: UIViewController {
         }
       }
     }
-    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -40,14 +41,9 @@ class RootViewController: UIViewController {
   }
   
   
-  /*
-  // MARK: - Navigation
+  // MARK: Other methods
   
-  // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  // Get the new view controller using segue.destinationViewController.
-  // Pass the selected object to the new view controller.
+  func searchTap() {
+    print("searchTap...")
   }
-  */
-  
 }

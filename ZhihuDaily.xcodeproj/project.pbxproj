@@ -17,6 +17,10 @@
 		4C475E6C1C12E3C300D7CF17 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6B1C12E3C300D7CF17 /* AppConstants.swift */; };
 		4C475E6E1C12E58E00D7CF17 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6D1C12E58E00D7CF17 /* Config.swift */; };
 		4C475E701C12E9A900D7CF17 /* SplashResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */; };
+		4C8D51A31C60B6F50021ED5E /* FYColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51A21C60B6F50021ED5E /* FYColors.swift */; };
+		4C8D51A61C60B7F10021ED5E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51A51C60B7F10021ED5E /* BaseViewController.swift */; };
+		4C8D51A91C60C0650021ED5E /* UIColor+Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51A81C60C0650021ED5E /* UIColor+Daily.swift */; };
+		4C8D51AB1C60C19B0021ED5E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51AA1C60C19B0021ED5E /* BaseNavigationController.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -57,6 +61,10 @@
 		4C475E6B1C12E3C300D7CF17 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4C475E6D1C12E58E00D7CF17 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashResolution.swift; sourceTree = "<group>"; };
+		4C8D51A21C60B6F50021ED5E /* FYColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYColors.swift; sourceTree = "<group>"; };
+		4C8D51A51C60B7F10021ED5E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/BaseViewController.swift; sourceTree = "<group>"; };
+		4C8D51A81C60C0650021ED5E /* UIColor+Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Daily.swift"; sourceTree = "<group>"; };
+		4C8D51AA1C60C19B0021ED5E /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Controllers/BaseNavigationController.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +140,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C8D51A41C60B7970021ED5E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D51A51C60B7F10021ED5E /* BaseViewController.swift */,
+				4C8D51AA1C60C19B0021ED5E /* BaseNavigationController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		4C8D51A71C60C00C0021ED5E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C8D51A81C60C0650021ED5E /* UIColor+Daily.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		4CB6F05D1C12035D00E7EEA3 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +214,7 @@
 		4CB6F0921C12049D00E7EEA3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C8D51A41C60B7970021ED5E /* Base */,
 				4CB6F0A21C1208F800E7EEA3 /* Tools */,
 				4CB6F0A11C1208E200E7EEA3 /* Helper */,
 				4CB6F0A01C1208BD00E7EEA3 /* Misc */,
@@ -244,9 +270,11 @@
 		4CB6F0A01C1208BD00E7EEA3 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4C8D51A71C60C00C0021ED5E /* Extension */,
 				4C475E6B1C12E3C300D7CF17 /* AppConstants.swift */,
 				4C475E6D1C12E58E00D7CF17 /* Config.swift */,
 				4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */,
+				4C8D51A21C60B6F50021ED5E /* FYColors.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -449,12 +477,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8D51AB1C60C19B0021ED5E /* BaseNavigationController.swift in Sources */,
 				4C475E6A1C12E2EB00D7CF17 /* AppClient.swift in Sources */,
+				4C8D51A91C60C0650021ED5E /* UIColor+Daily.swift in Sources */,
 				4CB6F09A1C12053300E7EEA3 /* RootViewController.swift in Sources */,
+				4C8D51A61C60B7F10021ED5E /* BaseViewController.swift in Sources */,
 				4CB6F0A41C1209F800E7EEA3 /* Splash.swift in Sources */,
 				4CB6F0951C12049D00E7EEA3 /* AppDelegate.swift in Sources */,
 				4C475E701C12E9A900D7CF17 /* SplashResolution.swift in Sources */,
 				4C475E6C1C12E3C300D7CF17 /* AppConstants.swift in Sources */,
+				4C8D51A31C60B6F50021ED5E /* FYColors.swift in Sources */,
 				4C475E6E1C12E58E00D7CF17 /* Config.swift in Sources */,
 				4C350F791C12DC3C00818713 /* LatestNews.swift in Sources */,
 				4C475E681C12E1E600D7CF17 /* ZhihuAPI.swift in Sources */,
