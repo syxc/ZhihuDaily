@@ -9,11 +9,11 @@
 import UIKit
 import Alamofire
 
-
 class RootViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.statusBarShouldLight = true
     self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
     
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: Selector("searchTap"))
@@ -29,6 +29,10 @@ class RootViewController: BaseViewController {
         }
       }
     }
+  }
+  
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return super.preferredStatusBarStyle()
   }
   
   override func viewWillAppear(animated: Bool) {
