@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     self.window?.rootViewController = nav
     self.window!.makeKeyAndVisible()
+    
+    SVProgressHUD.setBackgroundColor(UIColor.darkGrayColor())
+    SVProgressHUD.setForegroundColor(UIColor.whiteColor())
     
     return true
   }

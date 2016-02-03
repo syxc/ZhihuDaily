@@ -9,12 +9,9 @@
 import Alamofire
 import Foundation
 
-
 class AppClient: ZhihuAPI {
   
-  init() {
-    
-  }
+  init() {}
   
   class var instance: AppClient {
     struct Static {
@@ -42,8 +39,20 @@ class AppClient: ZhihuAPI {
     }
   }
   
-  func fetchLatestNews() {
-    
+  func fetchLatestNews(callback: Callback) -> Void {
+    let url = api_fetch_latestNews
+    print("url: \(url)")
+    Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+      // fail
+      if let error = response.result.error {
+        callback(nil, error)
+      } else {
+        // success
+        if let json = response.result.value {
+          callback(json, nil)
+        }
+      }
+    }
   }
   
 }

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Alamofire
+import ObjectMapper
+import SVProgressHUD
 
 class RootViewController: BaseViewController {
   
@@ -20,12 +21,24 @@ class RootViewController: BaseViewController {
     
     AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
       if error != nil {
-        print("error: \(error)")
+        print("ERROR: \(error)")
       } else {
-        if let json = data as? Dictionary<String, String> {
-          print("json: \(json)")
-          let splash = Splash(text: json["text"], image: json["img"])
-          print(splash.image)
+        if let splash = Mapper<Splash>().map(data) {
+          print("splash=\(splash.description)")
+        }
+      }
+    }
+    
+    AppClient.instance.fetchLatestNews { (data, error) -> Void in
+      if error != nil {
+        print("ERROR: \(error)")
+      } else {
+        if let json = data as? Dictionary<String, AnyObject> {
+          print("JSON: \(json)")
+          if let news = Mapper<LatestNews>().map(data) {
+            print("news=\(news.description)")
+            SVProgressHUD.showInfoWithStatus(news.stories?.first?.title)
+          }
         }
       }
     }

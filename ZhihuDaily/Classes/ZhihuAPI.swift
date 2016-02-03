@@ -30,6 +30,6 @@ protocol ZhihuAPI {
   /**
    获取最新消息
    */
-  func fetchLatestNews()
+  func fetchLatestNews(callback: Callback)
   
 }
