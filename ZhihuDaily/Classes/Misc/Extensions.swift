@@ -42,3 +42,20 @@ extension UINavigationController {
   }
   
 }
+
+
+// MARK: - String
+
+extension String {
+  var ns: NSString {
+    return self as NSString
+  }
+  
+  var pathExtension: String? {
+    return ns.pathExtension
+  }
+  
+  var lastPathComponent: String? {
+    return ns.lastPathComponent
+  }
+}

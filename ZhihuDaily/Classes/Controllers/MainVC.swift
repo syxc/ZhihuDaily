@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 import SVProgressHUD
 
-class RootViewController: BaseViewController {
+class MainVC: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,22 +21,22 @@ class RootViewController: BaseViewController {
     
     AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
       if error != nil {
-        print("ERROR: \(error)")
+        println("ERROR: \(error)")
       } else {
         if let splash = Mapper<Splash>().map(data) {
-          print("splash=\(splash.description)")
+          println("splash=\(splash.description)")
         }
       }
     }
     
     AppClient.instance.fetchLatestNews { (data, error) -> Void in
       if error != nil {
-        print("ERROR: \(error)")
+        println("ERROR: \(error)")
       } else {
         if let json = data as? Dictionary<String, AnyObject> {
-          print("JSON: \(json)")
+          println("JSON: \(json)")
           if let news = Mapper<LatestNews>().map(data) {
-            print("news=\(news.description)")
+            println("news=\(news.description)")
             SVProgressHUD.showInfoWithStatus(news.stories?.first?.title)
           }
         }
@@ -61,6 +61,6 @@ class RootViewController: BaseViewController {
   // MARK: Other methods
   
   func searchTap() {
-    print("searchTap...")
+    println("searchTap...")
   }
 }

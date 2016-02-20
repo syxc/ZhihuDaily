@@ -14,7 +14,6 @@
 		4C3581B61C786BC000AE58FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A11C786BC000AE58FF /* AppDelegate.swift */; };
 		4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A41C786BC000AE58FF /* BaseViewController.swift */; };
 		4C3581B81C786BC000AE58FF /* FYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A51C786BC000AE58FF /* FYNavigationController.swift */; };
-		4C3581B91C786BC000AE58FF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A61C786BC000AE58FF /* RootViewController.swift */; };
 		4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A81C786BC000AE58FF /* AppConstants.swift */; };
 		4C3581BB1C786BC000AE58FF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A91C786BC000AE58FF /* Config.swift */; };
 		4C3581BC1C786BC000AE58FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581AA1C786BC000AE58FF /* Extensions.swift */; };
@@ -24,6 +23,8 @@
 		4C3581C01C786BC000AE58FF /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581AF1C786BC000AE58FF /* Splash.swift */; };
 		4C3581C11C786BC000AE58FF /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581B01C786BC000AE58FF /* Story.swift */; };
 		4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581B11C786BC000AE58FF /* TopStory.swift */; };
+		4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581C31C786C6700AE58FF /* MainVC.swift */; };
+		4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581C51C786F3700AE58FF /* FYLog.swift */; };
 		4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B97861C12133100AEBC57 /* Launch Screen.storyboard */; };
 		4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B978D1C12146800AEBC57 /* Localizable.strings */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
@@ -57,7 +58,6 @@
 		4C3581A11C786BC000AE58FF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C3581A41C786BC000AE58FF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C3581A51C786BC000AE58FF /* FYNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYNavigationController.swift; sourceTree = "<group>"; };
-		4C3581A61C786BC000AE58FF /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4C3581A81C786BC000AE58FF /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4C3581A91C786BC000AE58FF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C3581AA1C786BC000AE58FF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		4C3581B01C786BC000AE58FF /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		4C3581B11C786BC000AE58FF /* TopStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStory.swift; sourceTree = "<group>"; };
 		4C3581B31C786BC000AE58FF /* ZhihuDaily-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhihuDaily-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C3581C31C786C6700AE58FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		4C3581C51C786F3700AE58FF /* FYLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYLog.swift; sourceTree = "<group>"; };
 		4C3B97851C12133100AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97871C12134300AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97881C12134B00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				4C3581A31C786BC000AE58FF /* Base */,
-				4C3581A61C786BC000AE58FF /* RootViewController.swift */,
+				4C3581C31C786C6700AE58FF /* MainVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +204,7 @@
 				4C3581AA1C786BC000AE58FF /* Extensions.swift */,
 				4C3581AB1C786BC000AE58FF /* FYColors.swift */,
 				4C3581AC1C786BC000AE58FF /* SplashResolution.swift */,
+				4C3581C51C786F3700AE58FF /* FYLog.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -474,8 +477,9 @@
 				4C3581BC1C786BC000AE58FF /* Extensions.swift in Sources */,
 				4C3581B81C786BC000AE58FF /* FYNavigationController.swift in Sources */,
 				4C3581BE1C786BC000AE58FF /* SplashResolution.swift in Sources */,
+				4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */,
 				4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */,
-				4C3581B91C786BC000AE58FF /* RootViewController.swift in Sources */,
+				4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */,
 				4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */,
 				4C3581C11C786BC000AE58FF /* Story.swift in Sources */,
 				4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */,
@@ -638,6 +642,7 @@
 				INFOPLIST_FILE = ZhihuDaily/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buybuychat.zhihudaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZhihuDaily/Classes/ZhihuDaily-Bridging-Header.h";
