@@ -29,7 +29,7 @@ import UIKit
   
   /// Show logger in UIAlertView
   func uLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
-    let alertView = UIAlertView(title: "[\(filename.lastPathComponent):\(line)]", message: "\(function) - \(message)",  delegate:nil, cancelButtonTitle:"OK")
+    let alertView = UIAlertView(title: "[\(filename.lastPathComponent):\(line)]", message: "\(function) - \(message)", delegate:nil, cancelButtonTitle:"OK")
     alertView.show()
   }
 #else
