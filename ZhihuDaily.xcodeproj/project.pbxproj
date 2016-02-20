@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		251572BD4F5D9B9F6DBD9203 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B9F7147E7BDED4C7B287D0 /* Pods.framework */; };
-		4C236C011C61D5DA00E556B6 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C236C001C61D5DA00E556B6 /* UINavigationController+StatusBar.swift */; };
 		4C236C071C61ED3700E556B6 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C236C061C61ED3700E556B6 /* Story.swift */; };
 		4C236C091C61F4D800E556B6 /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C236C081C61F4D800E556B6 /* TopStory.swift */; };
 		4C350F771C12DA9C00818713 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 4C350F761C12DA9C00818713 /* VERSION */; };
 		4C350F791C12DC3C00818713 /* LatestNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C350F781C12DC3C00818713 /* LatestNews.swift */; };
+		4C35819C1C785CD000AE58FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35819B1C785CD000AE58FF /* Extensions.swift */; };
 		4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B97861C12133100AEBC57 /* Launch Screen.storyboard */; };
 		4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B978D1C12146800AEBC57 /* Localizable.strings */; };
 		4C475E681C12E1E600D7CF17 /* ZhihuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E671C12E1E600D7CF17 /* ZhihuAPI.swift */; };
@@ -22,7 +22,6 @@
 		4C475E701C12E9A900D7CF17 /* SplashResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */; };
 		4C8D51A31C60B6F50021ED5E /* FYColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51A21C60B6F50021ED5E /* FYColors.swift */; };
 		4C8D51A61C60B7F10021ED5E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51A51C60B7F10021ED5E /* BaseViewController.swift */; };
-		4C8D51A91C60C0650021ED5E /* UIColor+Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51A81C60C0650021ED5E /* UIColor+Daily.swift */; };
 		4C8D51AB1C60C19B0021ED5E /* FYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D51AA1C60C19B0021ED5E /* FYNavigationController.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
@@ -30,6 +29,7 @@
 		4CB6F0951C12049D00E7EEA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0931C12049D00E7EEA3 /* AppDelegate.swift */; };
 		4CB6F09A1C12053300E7EEA3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0991C12053300E7EEA3 /* RootViewController.swift */; };
 		4CB6F0A41C1209F800E7EEA3 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0A31C1209F800E7EEA3 /* Splash.swift */; };
+		6263C05200D0E5F9D8F3A699 /* Pods_ZhihuDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA5F9FA4E361EB042056844 /* Pods_ZhihuDaily.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +51,12 @@
 
 /* Begin PBXFileReference section */
 		446ECBD7E53555218E15A697 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		4C236C001C61D5DA00E556B6 /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
 		4C236C021C61E4C000E556B6 /* ZhihuDaily-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZhihuDaily-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C236C061C61ED3700E556B6 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		4C236C081C61F4D800E556B6 /* TopStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStory.swift; sourceTree = "<group>"; };
 		4C350F761C12DA9C00818713 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		4C350F781C12DC3C00818713 /* LatestNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestNews.swift; sourceTree = "<group>"; };
+		4C35819B1C785CD000AE58FF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C3B97851C12133100AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97871C12134300AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97881C12134B00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 		4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashResolution.swift; sourceTree = "<group>"; };
 		4C8D51A21C60B6F50021ED5E /* FYColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYColors.swift; sourceTree = "<group>"; };
 		4C8D51A51C60B7F10021ED5E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/BaseViewController.swift; sourceTree = "<group>"; };
-		4C8D51A81C60C0650021ED5E /* UIColor+Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Daily.swift"; sourceTree = "<group>"; };
 		4C8D51AA1C60C19B0021ED5E /* FYNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FYNavigationController.swift; path = Controllers/FYNavigationController.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +85,9 @@
 		4CB6F0A31C1209F800E7EEA3 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		4D87BD692D04CE8076F2DED4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		83B9F7147E7BDED4C7B287D0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BEFB2615D36C51597DAC473 /* Pods-ZhihuDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.release.xcconfig"; sourceTree = "<group>"; };
+		AAA5F9FA4E361EB042056844 /* Pods_ZhihuDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhihuDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D983EC87ABBABD572CF1F55E /* Pods-ZhihuDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				251572BD4F5D9B9F6DBD9203 /* Pods.framework in Frameworks */,
+				6263C05200D0E5F9D8F3A699 /* Pods_ZhihuDaily.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				83B9F7147E7BDED4C7B287D0 /* Pods.framework */,
+				AAA5F9FA4E361EB042056844 /* Pods_ZhihuDaily.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +131,8 @@
 			children = (
 				4D87BD692D04CE8076F2DED4 /* Pods.debug.xcconfig */,
 				446ECBD7E53555218E15A697 /* Pods.release.xcconfig */,
+				D983EC87ABBABD572CF1F55E /* Pods-ZhihuDaily.debug.xcconfig */,
+				8BEFB2615D36C51597DAC473 /* Pods-ZhihuDaily.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -154,15 +160,6 @@
 				4C8D51AA1C60C19B0021ED5E /* FYNavigationController.swift */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		4C8D51A71C60C00C0021ED5E /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4C8D51A81C60C0650021ED5E /* UIColor+Daily.swift */,
-				4C236C001C61D5DA00E556B6 /* UINavigationController+StatusBar.swift */,
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 		4CB6F05D1C12035D00E7EEA3 = {
@@ -281,7 +278,7 @@
 		4CB6F0A01C1208BD00E7EEA3 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				4C8D51A71C60C00C0021ED5E /* Extension */,
+				4C35819B1C785CD000AE58FF /* Extensions.swift */,
 				4C475E6B1C12E3C300D7CF17 /* AppConstants.swift */,
 				4C475E6D1C12E58E00D7CF17 /* Config.swift */,
 				4C475E6F1C12E9A900D7CF17 /* SplashResolution.swift */,
@@ -463,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F293E9D6C1810D32EF9C70B /* Embed Pods Frameworks */ = {
@@ -478,7 +475,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -490,7 +487,6 @@
 			files = (
 				4C8D51AB1C60C19B0021ED5E /* FYNavigationController.swift in Sources */,
 				4C475E6A1C12E2EB00D7CF17 /* AppClient.swift in Sources */,
-				4C8D51A91C60C0650021ED5E /* UIColor+Daily.swift in Sources */,
 				4CB6F09A1C12053300E7EEA3 /* RootViewController.swift in Sources */,
 				4C8D51A61C60B7F10021ED5E /* BaseViewController.swift in Sources */,
 				4CB6F0A41C1209F800E7EEA3 /* Splash.swift in Sources */,
@@ -502,7 +498,7 @@
 				4C350F791C12DC3C00818713 /* LatestNews.swift in Sources */,
 				4C475E681C12E1E600D7CF17 /* ZhihuAPI.swift in Sources */,
 				4C236C091C61F4D800E556B6 /* TopStory.swift in Sources */,
-				4C236C011C61D5DA00E556B6 /* UINavigationController+StatusBar.swift in Sources */,
+				4C35819C1C785CD000AE58FF /* Extensions.swift in Sources */,
 				4C236C071C61ED3700E556B6 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,7 +643,7 @@
 		};
 		4CB6F08A1C12035D00E7EEA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D87BD692D04CE8076F2DED4 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = D983EC87ABBABD572CF1F55E /* Pods-ZhihuDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -656,6 +652,7 @@
 					"$(PROJECT_DIR)/ZhihuDaily/Vendor",
 				);
 				INFOPLIST_FILE = ZhihuDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buybuychat.zhihudaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,7 +663,7 @@
 		};
 		4CB6F08B1C12035D00E7EEA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 446ECBD7E53555218E15A697 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8BEFB2615D36C51597DAC473 /* Pods-ZhihuDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -675,6 +672,7 @@
 					"$(PROJECT_DIR)/ZhihuDaily/Vendor",
 				);
 				INFOPLIST_FILE = ZhihuDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buybuychat.zhihudaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";

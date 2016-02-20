@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hue
 import SVProgressHUD
 
 @UIApplicationMain
@@ -24,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.rootViewController = nav
     self.window!.makeKeyAndVisible()
     
-    SVProgressHUD.setBackgroundColor(UIColor.darkGrayColor())
-    SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+    self.setupHUD()
     
     return true
   }
@@ -52,6 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
   
+  
+  // MARK: - Config
+  
+  func setupHUD() {
+    SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+    SVProgressHUD.setBackgroundColor(UIColor.hudBackgroundColor())
+  }
   
 }
 

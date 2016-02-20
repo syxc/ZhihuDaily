@@ -6,14 +6,12 @@
 //  Copyright © 2015年 syxc. All rights reserved.
 //
 
-import Alamofire
 import Foundation
+import Alamofire
 
-class AppClient: ZhihuAPI {
+final class AppClient: ZhihuAPI {
   
-  init() {}
-  
-  class var instance: AppClient {
+  static var instance: AppClient {
     struct Static {
       static let instance = AppClient()
     }
@@ -32,9 +30,10 @@ class AppClient: ZhihuAPI {
         callback(nil, error)
       } else {
         // success
-        if let json = response.result.value {
-          callback(json, nil)
+        guard let json = response.result.value else {
+          return
         }
+        callback(json, nil)
       }
     }
   }
@@ -48,9 +47,10 @@ class AppClient: ZhihuAPI {
         callback(nil, error)
       } else {
         // success
-        if let json = response.result.value {
-          callback(json, nil)
+        guard let json = response.result.value else {
+          return
         }
+        callback(json, nil)
       }
     }
   }
