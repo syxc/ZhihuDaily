@@ -40,7 +40,7 @@ final class AppClient: ZhihuAPI {
   
   func fetchLatestNews(callback: Callback) -> Void {
     let url = api_fetch_latestNews
-    dLog("url: \(url)")
+    logger("url: \(url)")
     Alamofire.request(.GET, url).responseJSON { (response) -> Void in
       // fail
       if let error = response.result.error {

@@ -5,40 +5,35 @@
 //  Created by syxc on 16/2/20.
 //  Copyright © 2016年 syxc. All rights reserved.
 //
-//  println, dLog and aLog macros to abbreviate NSLog.
+//  println and logger macros to abbreviate NSLog.
 //  Use like this:
 //
-//  dLog("Log this!")
+//  logger("Log this!")
+//
+//  via: https://gist.github.com/xmzio/fccd29fc945de7924b71
 //
 
 import Foundation
 import UIKit
 
 #if DEBUG
-  /// println
-  func println(object: Any, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
-    NSLog("[\(filename.lastPathComponent):\(line)] \(function) - \(object)")
-  }
-  
-  /// dLog
-  func dLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+  /// Custom println
+  func println(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     NSLog("[\(filename.lastPathComponent):\(line)] \(function) - \(message)")
   }
   
-  /// uLog
+  /// logger
+  func logger(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
+    NSLog("[\(filename.lastPathComponent):\(line)] \(function) - \(message)")
+  }
+  
+  /// Show logger in UIAlertView
   func uLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
     let alertView = UIAlertView(title: "[\(filename.lastPathComponent):\(line)]", message: "\(function) - \(message)",  delegate:nil, cancelButtonTitle:"OK")
     alertView.show()
   }
 #else
-  func println(object: Any, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {}
-  func dLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {}
+  func println(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {}
+  func logger(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {}
   func uLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {}
 #endif
-
-/// aLog
-func aLog(message: String, filename: String = __FILE__, function: String = __FUNCTION__, line: Int = __LINE__) {
-  #if DEBUG
-    NSLog("[\(filename.lastPathComponent):\(line)] \(function) - \(message)")
-  #endif
-}
