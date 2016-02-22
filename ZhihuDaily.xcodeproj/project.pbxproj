@@ -30,6 +30,7 @@
 		4C6718E71C7AE5F800A81610 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */; };
 		4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E81C7AE8BE00A81610 /* FYError.swift */; };
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
+		4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -82,6 +83,7 @@
 		4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		4C6718E81C7AE8BE00A81610 /* FYError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYError.swift; sourceTree = "<group>"; };
 		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				4C3581A41C786BC000AE58FF /* BaseViewController.swift */,
 				4C3581A51C786BC000AE58FF /* FYNavigationController.swift */,
 				4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */,
+				4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */,
 				4C6718E71C7AE5F800A81610 /* ProgressHUD.swift in Sources */,
 				4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */,
+				4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */,
 				4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */,
 				4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */,
 				4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class MainVC: BaseViewController {
+class MainVC: BaseTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
