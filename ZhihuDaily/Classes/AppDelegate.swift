@@ -8,7 +8,6 @@
 
 import UIKit
 import Hue
-import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -56,8 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Config
   
   func setupHUD() {
-    SVProgressHUD.setForegroundColor(UIColor.whiteColor())
-    SVProgressHUD.setBackgroundColor(UIColor.hudBackgroundColor())
+    //SVProgressHUD.setForegroundColor(UIColor.whiteColor())
+    //SVProgressHUD.setBackgroundColor(UIColor.hudBackgroundColor())
   }
   
 }

@@ -27,6 +27,9 @@
 		4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581C51C786F3700AE58FF /* FYLog.swift */; };
 		4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B97861C12133100AEBC57 /* Launch Screen.storyboard */; };
 		4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B978D1C12146800AEBC57 /* Localizable.strings */; };
+		4C6718E71C7AE5F800A81610 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */; };
+		4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E81C7AE8BE00A81610 /* FYError.swift */; };
+		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -76,6 +79,9 @@
 		4C3B978C1C12146800AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C3B978E1C12146B00AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4C3B978F1C12146C00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		4C6718E81C7AE8BE00A81610 /* FYError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYError.swift; sourceTree = "<group>"; };
+		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 			children = (
 				4C3581A41C786BC000AE58FF /* BaseViewController.swift */,
 				4C3581A51C786BC000AE58FF /* FYNavigationController.swift */,
+				4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 				4C3581AB1C786BC000AE58FF /* FYColors.swift */,
 				4C3581AC1C786BC000AE58FF /* SplashResolution.swift */,
 				4C3581C51C786F3700AE58FF /* FYLog.swift */,
+				4C6718E81C7AE8BE00A81610 /* FYError.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 		4CB6F0941C12049D00E7EEA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 				4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */,
 				4C350F771C12DA9C00818713 /* VERSION in Resources */,
 				4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */,
+				4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */,
 				4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +488,8 @@
 				4C3581B81C786BC000AE58FF /* FYNavigationController.swift in Sources */,
 				4C3581BE1C786BC000AE58FF /* SplashResolution.swift in Sources */,
 				4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */,
+				4C6718E71C7AE5F800A81610 /* ProgressHUD.swift in Sources */,
+				4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */,
 				4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */,
 				4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */,
 				4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */,

@@ -5,7 +5,7 @@ use_frameworks!
 def pods
   pod 'Alamofire', '~> 3.0'
   pod 'ObjectMapper', '~> 1.1'
-  pod 'SVProgressHUD'
+  pod 'MBProgressHUD', '~> 0.9.2'
   pod 'Hue'
 end
 

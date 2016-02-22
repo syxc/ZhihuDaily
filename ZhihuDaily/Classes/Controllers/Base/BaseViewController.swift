@@ -13,8 +13,12 @@ class BaseViewController: UIViewController {
   var statusBarShouldLight = false
   var animatedOnNavigationBar = true
   
+  var hud: ProgressHUD!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    // Setup ProgressHUD
+    self.hud = ProgressHUD(view: self.view)
   }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -61,4 +65,5 @@ class BaseViewController: UIViewController {
     
     super.performSegueWithIdentifier(identifier, sender: sender)
   }
+  
 }

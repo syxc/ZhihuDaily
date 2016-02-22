@@ -8,7 +8,6 @@
 
 import UIKit
 import ObjectMapper
-import SVProgressHUD
 
 class MainVC: BaseViewController {
   
@@ -18,6 +17,8 @@ class MainVC: BaseViewController {
     self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
     
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: Selector("searchTap"))
+    
+    self.hud.show()
     
     AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
       if error != nil {
@@ -37,7 +38,8 @@ class MainVC: BaseViewController {
           println("JSON: \(json)")
           if let news = Mapper<LatestNews>().map(data) {
             println("news=\(news.description)")
-            SVProgressHUD.showInfoWithStatus(news.stories?.first?.title)
+            self.hud.dismiss()
+            //self.hud.showSuccessWithStatus(news.stories?.first?.title)
           }
         }
       }
