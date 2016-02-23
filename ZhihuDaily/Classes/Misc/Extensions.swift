@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 import Hue
+import MBProgressHUD
 
 // MARK: - UIColor
 
 extension UIColor {
-  
   static func themeColor() -> UIColor {
     return UIColor.hex(FYColors.theme)
   }
@@ -21,14 +21,12 @@ extension UIColor {
   static func hudBackgroundColor() -> UIColor {
     return UIColor.hex("#000000").alpha(0.80)
   }
-  
 }
 
 
 // MARK: - UINavigationController
 
 extension UINavigationController {
-  
   public override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return (self.topViewController?.preferredStatusBarStyle())!
   }
@@ -40,7 +38,21 @@ extension UINavigationController {
   public override func prefersStatusBarHidden() -> Bool {
     return (self.topViewController?.prefersStatusBarHidden())!
   }
-  
+}
+
+
+// MARK: - UITableView
+
+extension UITableView {
+  /* Solve the MBProgressHud behind the UITableView divider (seperator). */
+  public override func didAddSubview(subview: UIView) {
+    for view in self.subviews {
+      if view.isKindOfClass(MBProgressHUD.classForCoder()) {
+        self.bringSubviewToFront(view)
+        break
+      }
+    }
+  }
 }
 
 
