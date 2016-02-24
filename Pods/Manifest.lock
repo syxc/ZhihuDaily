@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (3.2.0)
-  - FYLogger (0.0.5)
+  - FYLogger (0.0.6)
   - Hue (1.0.1)
   - MBProgressHUD (0.9.2)
   - ObjectMapper (1.1.5)
@@ -14,7 +14,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  FYLogger: 8cc7f6130bcd05b8463cc2d443a1d1d94dd14ac5
+  FYLogger: 5bbb0a8abbaaead1c0a48ff2951e4ba098a4f6ab
   Hue: 0a53589bb58317e74068863b701ef1e5eee89ac1
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   ObjectMapper: 528b1a6677a6acac7747edd508576983e76a9148
