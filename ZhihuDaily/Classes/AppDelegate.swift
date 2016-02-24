@@ -10,6 +10,17 @@ import UIKit
 import Hue
 import FYLogger
 
+/* ---------- Debug model ---------- */
+
+/// 应用调试状态
+var appDebug: Bool {
+  #if DEBUG
+    return true
+  #else
+    return false
+  #endif
+}
+
 /// 全局日志组件
 let log = FYLog()
 
@@ -61,27 +72,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Config
   
   func setupLogger() {
-    if appDebug {
-      log.debug = true
-    } else {
-      log.debug = false
-    }
+    log.debug = appDebug
   }
   
   func setupHUD() {
     log.info("setupHUD")
   }
-  
 }
-
-/* ---------- Debug model ---------- */
-
-/// 应用调试状态
-var appDebug: Bool = {
-  #if DEBUG
-    return true
-  #else
-    return false
-  #endif
-}()
-

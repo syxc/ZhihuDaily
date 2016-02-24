@@ -22,7 +22,7 @@ enum Api: String {
 
 extension Api {
   var baseUrl: String {
-    guard appDebug else {
+    if appDebug {
       return "http://news-at.zhihu.com/api/4"
     }
     return "https://news-at.zhihu.com/api/4"
