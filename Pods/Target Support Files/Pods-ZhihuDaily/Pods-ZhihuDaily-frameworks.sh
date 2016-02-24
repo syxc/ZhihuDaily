@@ -85,12 +85,14 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ZhihuDaily/Alamofire.framework"
+  install_framework "Pods-ZhihuDaily/FYLogger.framework"
   install_framework "Pods-ZhihuDaily/Hue.framework"
   install_framework "Pods-ZhihuDaily/MBProgressHUD.framework"
   install_framework "Pods-ZhihuDaily/ObjectMapper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-ZhihuDaily/Alamofire.framework"
+  install_framework "Pods-ZhihuDaily/FYLogger.framework"
   install_framework "Pods-ZhihuDaily/Hue.framework"
   install_framework "Pods-ZhihuDaily/MBProgressHUD.framework"
   install_framework "Pods-ZhihuDaily/ObjectMapper.framework"

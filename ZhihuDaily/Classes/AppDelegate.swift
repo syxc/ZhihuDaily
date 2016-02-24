@@ -8,6 +8,9 @@
 
 import UIKit
 import Hue
+import FYLogger
+
+let log = FYLog()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    #if DEBUG
+      log.debug = true
+    #else
+      log.debug = false
+    #endif
+    
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     self.window!.backgroundColor = UIColor.whiteColor()
     
@@ -55,8 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Config
   
   func setupHUD() {
-    //SVProgressHUD.setForegroundColor(UIColor.whiteColor())
-    //SVProgressHUD.setBackgroundColor(UIColor.hudBackgroundColor())
+    log.info("setupHUD")
   }
   
 }

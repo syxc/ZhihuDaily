@@ -25,7 +25,7 @@ final class ProgressHUD: NSObject {
     super.init()
     
     guard let baseView = view else {
-      println("baseView is null")
+      log.info("baseView is null")
       return
     }
     

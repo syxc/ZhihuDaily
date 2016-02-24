@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		251572BD4F5D9B9F6DBD9203 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B9F7147E7BDED4C7B287D0 /* Pods.framework */; };
 		4C350F771C12DA9C00818713 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 4C350F761C12DA9C00818713 /* VERSION */; };
 		4C3581B41C786BC000AE58FF /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35819F1C786BC000AE58FF /* AppClient.swift */; };
 		4C3581B51C786BC000AE58FF /* ZhihuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */; };
@@ -24,7 +23,6 @@
 		4C3581C11C786BC000AE58FF /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581B01C786BC000AE58FF /* Story.swift */; };
 		4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581B11C786BC000AE58FF /* TopStory.swift */; };
 		4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581C31C786C6700AE58FF /* MainVC.swift */; };
-		4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581C51C786F3700AE58FF /* FYLog.swift */; };
 		4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B97861C12133100AEBC57 /* Launch Screen.storyboard */; };
 		4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B978D1C12146800AEBC57 /* Localizable.strings */; };
 		4C6718E71C7AE5F800A81610 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E61C7AE5F800A81610 /* ProgressHUD.swift */; };
@@ -34,7 +32,6 @@
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
-		6263C05200D0E5F9D8F3A699 /* Pods_ZhihuDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA5F9FA4E361EB042056844 /* Pods_ZhihuDaily.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +70,6 @@
 		4C3581B11C786BC000AE58FF /* TopStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStory.swift; sourceTree = "<group>"; };
 		4C3581B31C786BC000AE58FF /* ZhihuDaily-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhihuDaily-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C3581C31C786C6700AE58FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		4C3581C51C786F3700AE58FF /* FYLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYLog.swift; sourceTree = "<group>"; };
 		4C3B97851C12133100AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97871C12134300AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97881C12134B00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -105,8 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				251572BD4F5D9B9F6DBD9203 /* Pods.framework in Frameworks */,
-				6263C05200D0E5F9D8F3A699 /* Pods_ZhihuDaily.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +208,6 @@
 				4C3581AA1C786BC000AE58FF /* Extensions.swift */,
 				4C3581AB1C786BC000AE58FF /* FYColors.swift */,
 				4C3581AC1C786BC000AE58FF /* SplashResolution.swift */,
-				4C3581C51C786F3700AE58FF /* FYLog.swift */,
 				4C6718E81C7AE8BE00A81610 /* FYError.swift */,
 			);
 			path = Misc;
@@ -495,7 +488,6 @@
 				4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */,
 				4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */,
 				4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */,
-				4C3581C61C786F3700AE58FF /* FYLog.swift in Sources */,
 				4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */,
 				4C3581C11C786BC000AE58FF /* Story.swift in Sources */,
 				4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */,
