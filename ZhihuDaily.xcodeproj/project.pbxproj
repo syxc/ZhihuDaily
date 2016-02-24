@@ -14,7 +14,6 @@
 		4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A41C786BC000AE58FF /* BaseViewController.swift */; };
 		4C3581B81C786BC000AE58FF /* FYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A51C786BC000AE58FF /* FYNavigationController.swift */; };
 		4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A81C786BC000AE58FF /* AppConstants.swift */; };
-		4C3581BB1C786BC000AE58FF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A91C786BC000AE58FF /* Config.swift */; };
 		4C3581BC1C786BC000AE58FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581AA1C786BC000AE58FF /* Extensions.swift */; };
 		4C3581BD1C786BC000AE58FF /* FYColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581AB1C786BC000AE58FF /* FYColors.swift */; };
 		4C3581BE1C786BC000AE58FF /* SplashResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581AC1C786BC000AE58FF /* SplashResolution.swift */; };
@@ -29,6 +28,7 @@
 		4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E81C7AE8BE00A81610 /* FYError.swift */; };
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
 		4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */; };
+		4C9D4F501C7D8DFA00ABAE74 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D4F4F1C7D8DFA00ABAE74 /* Api.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -60,7 +60,6 @@
 		4C3581A41C786BC000AE58FF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4C3581A51C786BC000AE58FF /* FYNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYNavigationController.swift; sourceTree = "<group>"; };
 		4C3581A81C786BC000AE58FF /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		4C3581A91C786BC000AE58FF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4C3581AA1C786BC000AE58FF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4C3581AB1C786BC000AE58FF /* FYColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYColors.swift; sourceTree = "<group>"; };
 		4C3581AC1C786BC000AE58FF /* SplashResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashResolution.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		4C6718E81C7AE8BE00A81610 /* FYError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYError.swift; sourceTree = "<group>"; };
 		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		4C9D4F4F1C7D8DFA00ABAE74 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,6 +176,7 @@
 			children = (
 				4C35819F1C786BC000AE58FF /* AppClient.swift */,
 				4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */,
+				4C9D4F4F1C7D8DFA00ABAE74 /* Api.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -204,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				4C3581A81C786BC000AE58FF /* AppConstants.swift */,
-				4C3581A91C786BC000AE58FF /* Config.swift */,
 				4C3581AA1C786BC000AE58FF /* Extensions.swift */,
 				4C3581AB1C786BC000AE58FF /* FYColors.swift */,
 				4C3581AC1C786BC000AE58FF /* SplashResolution.swift */,
@@ -481,6 +481,7 @@
 				4C3581B61C786BC000AE58FF /* AppDelegate.swift in Sources */,
 				4C3581BF1C786BC000AE58FF /* LatestNews.swift in Sources */,
 				4C3581BC1C786BC000AE58FF /* Extensions.swift in Sources */,
+				4C9D4F501C7D8DFA00ABAE74 /* Api.swift in Sources */,
 				4C3581B81C786BC000AE58FF /* FYNavigationController.swift in Sources */,
 				4C3581BE1C786BC000AE58FF /* SplashResolution.swift in Sources */,
 				4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */,
@@ -492,7 +493,6 @@
 				4C3581C11C786BC000AE58FF /* Story.swift in Sources */,
 				4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */,
 				4C3581BD1C786BC000AE58FF /* FYColors.swift in Sources */,
-				4C3581BB1C786BC000AE58FF /* Config.swift in Sources */,
 				4C3581B41C786BC000AE58FF /* AppClient.swift in Sources */,
 				4C3581B51C786BC000AE58FF /* ZhihuAPI.swift in Sources */,
 				4C3581C01C786BC000AE58FF /* Splash.swift in Sources */,

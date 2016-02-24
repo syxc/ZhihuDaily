@@ -7,7 +7,6 @@
 import Foundation
 import UIKit
 
-
 public struct AppConstants {
   
   static var StatusBarHeight: CGFloat {

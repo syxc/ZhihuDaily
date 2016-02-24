@@ -10,6 +10,7 @@ import UIKit
 import Hue
 import FYLogger
 
+/// 全局日志组件
 let log = FYLog()
 
 @UIApplicationMain
@@ -18,12 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    
-    #if DEBUG
-      log.debug = true
-    #else
-      log.debug = false
-    #endif
+    self.setupLogger()
     
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
     self.window!.backgroundColor = UIColor.whiteColor()
@@ -64,9 +60,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   // MARK: - Config
   
+  func setupLogger() {
+    if appDebug {
+      log.debug = true
+    } else {
+      log.debug = false
+    }
+  }
+  
   func setupHUD() {
     log.info("setupHUD")
   }
   
 }
+
+/* ---------- Debug model ---------- */
+
+/// 应用调试状态
+var appDebug: Bool = {
+  #if DEBUG
+    return true
+  #else
+    return false
+  #endif
+}()
 
