@@ -169,8 +169,8 @@ final class ProgressHUD: NSObject {
   
   func imageBundle() -> NSBundle {
     let bundle = NSBundle(forClass: self.classForCoder)
-    let url = bundle.URLForResource("ProgressHUD", withExtension: "bundle")
-    let imageBundle = NSBundle(URL: url!)
+    let path = bundle.URLForResource("ProgressHUD", withExtension: "bundle")
+    let imageBundle = NSBundle(URL: path!)
     return imageBundle!
   }
   

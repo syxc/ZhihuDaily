@@ -20,7 +20,7 @@ class MainVC: BaseTableViewController {
     
     self.hud.show()
     
-    AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
+    /* AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
       if error != nil {
         log.error("ERROR: \(error)")
       } else {
@@ -28,20 +28,17 @@ class MainVC: BaseTableViewController {
           log.info("splash=\(splash.description)")
         }
       }
-    }
+    } */
     
     AppClient.instance.fetchLatestNews { (data, error) -> Void in
       if error != nil {
         log.error("ERROR: \(error)")
       } else {
-        if let json = data as? Dictionary<String, AnyObject> {
-          log.info("JSON: \(json)")
-          if let news = Mapper<LatestNews>().map(data) {
-            log.info("news=\(news.description)")
-            self.hud.dismiss()
-            //self.hud.showSuccessWithStatus(news.stories?.first?.title)
-          }
+        guard let news = Mapper<LatestNews>().map(data) else {
+          return
         }
+        log.info("news=\(news.description)")
+        self.hud.dismiss()
       }
     }
   }
