@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C187E6E1C7EE00B00D7609D /* PreProcessorMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C187E6D1C7EE00B00D7609D /* PreProcessorMacros.m */; };
 		4C350F771C12DA9C00818713 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 4C350F761C12DA9C00818713 /* VERSION */; };
 		4C3581B41C786BC000AE58FF /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35819F1C786BC000AE58FF /* AppClient.swift */; };
 		4C3581B51C786BC000AE58FF /* ZhihuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */; };
@@ -54,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		446ECBD7E53555218E15A697 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4C187E6C1C7EE00B00D7609D /* PreProcessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreProcessorMacros.h; sourceTree = "<group>"; };
+		4C187E6D1C7EE00B00D7609D /* PreProcessorMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreProcessorMacros.m; sourceTree = "<group>"; };
 		4C350F761C12DA9C00818713 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		4C35819F1C786BC000AE58FF /* AppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 		4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhihuAPI.swift; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				4C3581B21C786BC000AE58FF /* Views */,
 				4C3581A11C786BC000AE58FF /* AppDelegate.swift */,
 				4C3581B31C786BC000AE58FF /* ZhihuDaily-Bridging-Header.h */,
+				4C187E6C1C7EE00B00D7609D /* PreProcessorMacros.h */,
+				4C187E6D1C7EE00B00D7609D /* PreProcessorMacros.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */,
 				4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */,
 				4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */,
+				4C187E6E1C7EE00B00D7609D /* PreProcessorMacros.m in Sources */,
 				4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */,
 				4C3581C11C786BC000AE58FF /* Story.swift in Sources */,
 				4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */,
@@ -652,7 +658,7 @@
 				INFOPLIST_FILE = ZhihuDaily/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buybuychat.zhihudaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZhihuDaily/Classes/ZhihuDaily-Bridging-Header.h";

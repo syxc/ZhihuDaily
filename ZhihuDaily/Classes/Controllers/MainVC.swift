@@ -37,7 +37,7 @@ class MainVC: BaseTableViewController {
         guard let news = Mapper<LatestNews>().map(data) else {
           return
         }
-        log.info("news=\(news.description)")
+        log.info("news=\(news.description)")        
         self.hud.dismiss()
       }
     }

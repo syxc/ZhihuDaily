@@ -14,11 +14,11 @@ import FYLogger
 
 /// 应用调试状态
 var appDebug: Bool {
-  #if DEBUG
+  if DEBUG_BUILD {
     return true
-  #else
+  } else {
     return false
-  #endif
+  }
 }
 
 /// 全局日志组件
