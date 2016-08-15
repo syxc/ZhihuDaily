@@ -24,7 +24,7 @@ final class AppClient: ZhihuAPI {
   func fetchSplashScreen(resolution: SplashResolution?, callback: Callback) -> Void {
     let url = String(format: Api.fetch_splashScreen.raw, (resolution?.description)!)
     log.info("url: \(url)")
-    Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+    Alamofire.request(.GET, url).responseJSON { response in
       // fail
       if let error = response.result.error {
         callback(nil, error)
@@ -41,7 +41,7 @@ final class AppClient: ZhihuAPI {
   func fetchLatestNews(callback: Callback) -> Void {
     let url = Api.fetch_latestNews.raw
     log.info("url: \(url)")
-    Alamofire.request(.GET, url).responseJSON { (response) -> Void in
+    Alamofire.request(.GET, url).responseJSON { response in
       // fail
       if let error = response.result.error {
         callback(nil, error)
@@ -54,5 +54,4 @@ final class AppClient: ZhihuAPI {
       }
     }
   }
-  
 }

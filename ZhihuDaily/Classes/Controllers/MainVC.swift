@@ -16,11 +16,11 @@ class MainVC: BaseTableViewController {
     self.statusBarShouldLight = true
     self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
     
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: Selector("searchTap"))
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(self.searchTap))
     
     self.hud.show()
     
-    /* AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
+    AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
       if error != nil {
         log.error("ERROR: \(error)")
       } else {
@@ -28,7 +28,7 @@ class MainVC: BaseTableViewController {
           log.info("splash=\(splash.description)")
         }
       }
-    } */
+    }
     
     AppClient.instance.fetchLatestNews { (data, error) -> Void in
       if error != nil {
@@ -37,7 +37,8 @@ class MainVC: BaseTableViewController {
         guard let news = Mapper<LatestNews>().map(data) else {
           return
         }
-        log.info("news=\(news.description)")        
+        log.info("news=\(news.description)")
+        log.info("data=\(data)")
         self.hud.dismiss()
       }
     }
