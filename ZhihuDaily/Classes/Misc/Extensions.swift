@@ -8,18 +8,18 @@
 
 import Foundation
 import UIKit
-import Hue
 import MBProgressHUD
+import ChameleonFramework
 
 // MARK: - UIColor
 
 extension UIColor {
   static func themeColor() -> UIColor {
-    return UIColor.hex(FYColors.theme)
+    return HexColor(FYColors.theme)
   }
   
   static func hudBackgroundColor() -> UIColor {
-    return UIColor.hex("#000000").alpha(0.80)
+    return HexColor("#000000", 0.80);
   }
 }
 

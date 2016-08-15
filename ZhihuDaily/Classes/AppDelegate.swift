@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Hue
 import FYLogger
+import ChameleonFramework
 
 /* ---------- Debug model ---------- */
 

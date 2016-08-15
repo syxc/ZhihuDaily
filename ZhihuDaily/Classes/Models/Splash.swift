@@ -12,10 +12,10 @@ import ObjectMapper
 /// 启动界面图像
 struct Splash {
   /// 供显示的图片版权信息
-  var text: String?
+  var text: String!
   
   /// 图像的 URL
-  var image: String?
+  var image: String!
   
   var description: String {
     return "Text: \(text), Image: \(image)\n"

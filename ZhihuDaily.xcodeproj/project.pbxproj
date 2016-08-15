@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C187E6E1C7EE00B00D7609D /* PreProcessorMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C187E6D1C7EE00B00D7609D /* PreProcessorMacros.m */; };
-		4C350F771C12DA9C00818713 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 4C350F761C12DA9C00818713 /* VERSION */; };
 		4C3581B41C786BC000AE58FF /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35819F1C786BC000AE58FF /* AppClient.swift */; };
 		4C3581B51C786BC000AE58FF /* ZhihuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */; };
 		4C3581B61C786BC000AE58FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3581A11C786BC000AE58FF /* AppDelegate.swift */; };
@@ -29,7 +28,7 @@
 		4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718E81C7AE8BE00A81610 /* FYError.swift */; };
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
 		4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */; };
-		4C9D4F501C7D8DFA00ABAE74 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D4F4F1C7D8DFA00ABAE74 /* Api.swift */; };
+		4C9D4F501C7D8DFA00ABAE74 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -58,7 +57,6 @@
 		30E8F4EF2524A09C679231A8 /* Pods_ZhihuDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhihuDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C187E6C1C7EE00B00D7609D /* PreProcessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreProcessorMacros.h; sourceTree = "<group>"; };
 		4C187E6D1C7EE00B00D7609D /* PreProcessorMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreProcessorMacros.m; sourceTree = "<group>"; };
-		4C350F761C12DA9C00818713 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		4C35819F1C786BC000AE58FF /* AppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 		4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhihuAPI.swift; sourceTree = "<group>"; };
 		4C3581A11C786BC000AE58FF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +82,7 @@
 		4C6718E81C7AE8BE00A81610 /* FYError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYError.swift; sourceTree = "<group>"; };
 		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		4C9D4F4F1C7D8DFA00ABAE74 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,7 +134,7 @@
 		4C350F531C12A6A600818713 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				4C350F761C12DA9C00818713 /* VERSION */,
+				4C6B09C21D61DA10006905FE /* Extensions */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -162,7 +160,7 @@
 			children = (
 				4C35819F1C786BC000AE58FF /* AppClient.swift */,
 				4C3581A01C786BC000AE58FF /* ZhihuAPI.swift */,
-				4C9D4F4F1C7D8DFA00ABAE74 /* Api.swift */,
+				4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -215,6 +213,13 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4C6B09C21D61DA10006905FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4CB6F05D1C12035D00E7EEA3 = {
@@ -397,7 +402,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */,
-				4C350F771C12DA9C00818713 /* VERSION in Resources */,
 				4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */,
 				4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */,
 				4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */,
@@ -476,7 +480,7 @@
 				4C3581B61C786BC000AE58FF /* AppDelegate.swift in Sources */,
 				4C3581BF1C786BC000AE58FF /* LatestNews.swift in Sources */,
 				4C3581BC1C786BC000AE58FF /* Extensions.swift in Sources */,
-				4C9D4F501C7D8DFA00ABAE74 /* Api.swift in Sources */,
+				4C9D4F501C7D8DFA00ABAE74 /* API.swift in Sources */,
 				4C3581B81C786BC000AE58FF /* FYNavigationController.swift in Sources */,
 				4C3581BE1C786BC000AE58FF /* SplashResolution.swift in Sources */,
 				4C3581C41C786C6700AE58FF /* MainVC.swift in Sources */,

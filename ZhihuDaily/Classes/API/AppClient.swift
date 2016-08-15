@@ -22,7 +22,7 @@ final class AppClient: ZhihuAPI {
   // MARK: - ZhihuAPI methods
   
   func fetchSplashScreen(resolution: SplashResolution?, callback: Callback) -> Void {
-    let url = String(format: Api.fetch_splashScreen.raw, (resolution?.description)!)
+    let url = String(format: API.fetch_splashScreen.raw, (resolution?.description)!)
     log.info("url: \(url)")
     Alamofire.request(.GET, url).responseJSON { response in
       // fail
@@ -39,7 +39,7 @@ final class AppClient: ZhihuAPI {
   }
   
   func fetchLatestNews(callback: Callback) -> Void {
-    let url = Api.fetch_latestNews.raw
+    let url = API.fetch_latestNews.raw
     log.info("url: \(url)")
     Alamofire.request(.GET, url).responseJSON { response in
       // fail

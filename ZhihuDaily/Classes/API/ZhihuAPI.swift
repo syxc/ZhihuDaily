@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 typealias Callback = (AnyObject?, NSError?) -> Void
 
 protocol ZhihuAPI {

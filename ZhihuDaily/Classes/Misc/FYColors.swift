@@ -9,9 +9,6 @@
 import Foundation
 
 struct FYColors {
-  
   /* Hex Color value */
-  
-  static let theme = "#0767c8"  
-  
+  static let theme = "#0767c8"
 }

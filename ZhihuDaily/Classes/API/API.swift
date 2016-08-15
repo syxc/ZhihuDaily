@@ -1,5 +1,5 @@
 //
-//  Api.swift
+//  API.swift
 //  ZhihuDaily
 //
 //  Created by syxc on 16/2/24.
@@ -12,7 +12,7 @@ import Foundation
 
 /* 参考 https://github.com/izzyleung/ZhihuDailyPurify/wiki/知乎日报-API-分析 */
 
-enum Api: String {
+enum API: String {
   /// 启动界面图像获取
   case fetch_splashScreen = "/start-image/%@"
   
@@ -20,7 +20,7 @@ enum Api: String {
   case fetch_latestNews = "/news/latest"
 }
 
-extension Api {
+extension API {
   var baseUrl: String {
     if appDebug {
       return "http://news-at.zhihu.com/api/4"
