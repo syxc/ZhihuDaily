@@ -6,11 +6,21 @@ PODS:
   - ObjectMapper (1.4.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.4)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift2.3`)
   - FYLogger
   - Hue
   - MBProgressHUD (~> 0.9.2)
   - ObjectMapper (~> 1.1)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: swift2.3
+    :git: https://github.com/Alamofire/Alamofire.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 1ac83593aaea0bb31c5d22c86d5a2cf90498ee71
+    :git: https://github.com/Alamofire/Alamofire.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -19,6 +29,6 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
 
-PODFILE CHECKSUM: be793fe84d52fc76f676f9559d5fd56ff335b021
+PODFILE CHECKSUM: a39fb19e2a5475ee4dd3a7b6d80baf3e034b935a
 
 COCOAPODS: 1.0.1
