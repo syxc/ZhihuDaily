@@ -24,9 +24,9 @@ class MainVC: BaseTableViewController {
       if error != nil {
         log.error("ERROR: \(error)")
       } else {
-        /* if let splash = Mapper<Splash>().map(data) {
+        if let splash = Mapper<Splash>().map(data) {
           log.info("splash=\(splash.description)")
-        } */
+        }
       }
     }
     
@@ -62,5 +62,5 @@ class MainVC: BaseTableViewController {
   
   func searchTap() {
     log.info("searchTap...")
-  }
+  }  
 }

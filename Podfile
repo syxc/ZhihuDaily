@@ -7,6 +7,7 @@ def pods
   pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift2.3'
   pod 'ObjectMapper', '~> 1.1'
   pod 'MBProgressHUD', '~> 0.9.2'
+  pod 'PromiseKit', '3.5.0'
   pod 'ChameleonFramework/Swift'
   pod 'FYLogger'
 end
