@@ -27,12 +27,12 @@ protocol ZhihuAPI {
    
    - returns: `Promise<NSDictionary>`
    */
-  func fetchSplashScreen(resolution: SplashResolution) -> Promise<NSDictionary>
+  func fetchSplashScreen(resolution: SplashResolution) -> Promise<Splash>
   
   /**
    获取最新消息
    
    - returns: `Promise<NSDictionary>`
    */
-  func fetchLatestNews() -> Promise<NSDictionary>
+  func fetchLatestNews() -> Promise<LatestNews>
 }

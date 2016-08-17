@@ -45,13 +45,7 @@ class MainVC: BaseTableViewController {
     
     firstly {
         client.fetchSplashScreen(SplashResolution._1080)
-      }.then { dict -> Void in
-        log.info("dict=\(dict)")
-        
-        guard let splash = Mapper<Splash>().map(dict) else {
-          return
-        }
-        
+      }.then { splash -> Void in
         log.info("splash=\(splash.description)")
       }.always {
         self.hud.dismiss()
@@ -62,13 +56,7 @@ class MainVC: BaseTableViewController {
     
     firstly {
         client.fetchLatestNews()
-      }.then { dict -> Void in
-        log.info("dict=\(dict)")
-        
-        guard let news = Mapper<LatestNews>().map(dict) else {
-          return
-        }
-        
+      }.then { news -> Void in
         log.info("news=\(news.description)")
       }.always {
         self.hud.dismiss()
