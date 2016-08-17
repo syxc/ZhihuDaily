@@ -14,11 +14,7 @@ import ChameleonFramework
 
 /// 应用调试状态
 var appDebug: Bool {
-  if DEBUG_BUILD {
-    return true
-  } else {
-    return false
-  }
+  return DEBUG_BUILD ? true : false
 }
 
 /// 全局日志组件
