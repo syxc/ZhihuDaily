@@ -43,7 +43,7 @@ class MainVC: BaseTableViewController {
     let client = AppClient.shareClient
     
     firstly {
-      client.fetchSplashScreen(SplashResolution._1080)
+        client.fetchSplashScreen(SplashResolution._1080)
       }.then { dict -> Void in
         log.info("dict=\(dict)")
         guard let splash = Mapper<Splash>().map(dict) else {
@@ -57,7 +57,7 @@ class MainVC: BaseTableViewController {
     }
     
     firstly {
-      client.fetchLatestNews()
+        client.fetchLatestNews()
       }.then { dict -> Void in
         log.info("dict=\(dict)")
         guard let news = Mapper<LatestNews>().map(dict) else {
