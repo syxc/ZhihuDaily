@@ -8,50 +8,64 @@
 
 import Foundation
 import Alamofire
+import PromiseKit
 
-final class AppClient: ZhihuAPI {
+public class AppClient: ZhihuAPI {
   
-  static var instance: AppClient {
+  static var shareClient: AppClient {
     struct Static {
-      static let instance = AppClient()
+      static let client = AppClient()
     }
-    return Static.instance
+    return Static.client
   }
-  
   
   // MARK: - ZhihuAPI methods
   
-  func fetchSplashScreen(resolution: SplashResolution?, callback: Callback) -> Void {
-    let url = String(format: API.fetch_splashScreen.raw, (resolution?.description)!)
+  func fetchSplashScreen(resolution: SplashResolution) -> Promise<NSDictionary> {
+    let url = String(format: requestURL(API.fetch_splashScreen.raw), resolution.description)
     log.info("url: \(url)")
-    Alamofire.request(.GET, url).responseJSON { response in
-      // fail
-      if let error = response.result.error {
-        callback(nil, error)
-      } else {
-        // success
-        guard let json = response.result.value else {
-          return
-        }
-        callback(json, nil)
+    return Promise { fulfill, reject in
+      Alamofire.request(.GET, url)
+        .validate()
+        .responseJSON { response in
+          switch response.result {
+          case .Success(let dict):
+            fulfill(dict as! NSDictionary)
+          case .Failure(let error):
+            reject(error)
+          }
       }
     }
   }
   
-  func fetchLatestNews(callback: Callback) -> Void {
-    let url = API.fetch_latestNews.raw
+  func fetchLatestNews() -> Promise<NSDictionary> {
+    let url = requestURL(API.fetch_latestNews.raw)
     log.info("url: \(url)")
-    Alamofire.request(.GET, url).responseJSON { response in
-      // fail
-      if let error = response.result.error {
-        callback(nil, error)
-      } else {
-        // success
-        guard let json = response.result.value else {
-          return
-        }
-        callback(json, nil)
+    return Promise { fulfill, reject in
+      Alamofire.request(.GET, url)
+        .validate()
+        .responseJSON { response in
+          switch response.result {
+          case .Success(let dict):
+            fulfill(dict as! NSDictionary)
+          case .Failure(let error):
+            reject(error)
+          }
       }
     }
+  }
+  
+}
+
+extension AppClient {
+  var baseUrl: String {
+    if appDebug {
+      return "http://news-at.zhihu.com/api/4"
+    }
+    return "https://news-at.zhihu.com/api/4"
+  }
+  
+  func requestURL(url: String?) -> String {
+    return String(format: "%@%@", baseUrl, url!)
   }
 }

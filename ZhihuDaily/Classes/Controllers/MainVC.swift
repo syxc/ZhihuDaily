@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import PromiseKit
 
 class MainVC: BaseTableViewController {
   
@@ -19,29 +20,7 @@ class MainVC: BaseTableViewController {
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(self.searchTap))
     
     self.hud.show()
-    
-    AppClient.instance.fetchSplashScreen(SplashResolution._1080) { (data, error) -> Void in
-      if error != nil {
-        log.error("ERROR: \(error)")
-      } else {
-        if let splash = Mapper<Splash>().map(data) {
-          log.info("splash=\(splash.description)")
-        }
-      }
-    }
-    
-    AppClient.instance.fetchLatestNews { (data, error) -> Void in
-      if error != nil {
-        log.error("ERROR: \(error)")
-      } else {
-        guard let news = Mapper<LatestNews>().map(data) else {
-          return
-        }
-        log.info("news=\(news.description)")
-        log.info("data=\(data)")
-        self.hud.dismiss()
-      }
-    }
+    self.loadData()
   }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -58,9 +37,44 @@ class MainVC: BaseTableViewController {
   }
   
   
+  // MARK: Load data
+  
+  func loadData() {
+    let client = AppClient.shareClient
+    
+    firstly {
+      client.fetchSplashScreen(SplashResolution._1080)
+      }.then { dict -> Void in
+        log.info("dict=\(dict)")
+        guard let splash = Mapper<Splash>().map(dict) else {
+          return
+        }
+        log.info("splash=\(splash.description)")
+      }.always {
+        self.hud.dismiss()
+      }.error { error in
+        log.error("error=\(error)")
+    }
+    
+    firstly {
+      client.fetchLatestNews()
+      }.then { dict -> Void in
+        log.info("dict=\(dict)")
+        guard let news = Mapper<LatestNews>().map(dict) else {
+          return
+        }
+        log.info("news=\(news.description)")
+      }.always {
+        self.hud.dismiss()
+      }.error { error in
+        log.error("error=\(error)")
+    }
+  }
+  
+  
   // MARK: Other methods
   
   func searchTap() {
     log.info("searchTap...")
-  }  
+  }
 }

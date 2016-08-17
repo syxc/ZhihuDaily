@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let mainVC = MainVC()
     let nav = FYNavigationController(rootViewController: mainVC)
     
-    self.window?.rootViewController = nav
+    self.window!.rootViewController = nav
     self.window!.makeKeyAndVisible()
     
     self.setupHUD()

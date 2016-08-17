@@ -18,10 +18,10 @@ enum SplashResolution: String {
   static let allValues = [_320, _480, _720, _1080]
   
   var description: String {
-    return "\(rawValue)"
+    return "\(self.rawValue)"
   }
   
   var debugDescription: String {
-    return "SplashResolution (rawValue: \(rawValue))"
-  }  
+    return "SplashResolution (rawValue: \(self.rawValue))"
+  }
 }

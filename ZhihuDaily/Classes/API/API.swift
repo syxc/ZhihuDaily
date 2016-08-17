@@ -21,14 +21,7 @@ enum API: String {
 }
 
 extension API {
-  var baseUrl: String {
-    if appDebug {
-      return "http://news-at.zhihu.com/api/4"
-    }
-    return "https://news-at.zhihu.com/api/4"
-  }
-  
   var raw: String {
-    return String(format: "%@%@", baseUrl, self.rawValue)
+    return self.rawValue
   }
 }
