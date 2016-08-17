@@ -24,6 +24,9 @@ public class AppClient: ZhihuAPI {
   func fetchSplashScreen(resolution: SplashResolution) -> Promise<NSDictionary> {
     let url = String(format: requestURL(API.fetch_splashScreen.raw), resolution.description)
     log.info("url: \(url)")
+    
+    self.setNetworkActivityIndicatorVisible()
+    
     return Promise { fulfill, reject in
       Alamofire.request(.GET, url)
         .validate()
@@ -41,6 +44,9 @@ public class AppClient: ZhihuAPI {
   func fetchLatestNews() -> Promise<NSDictionary> {
     let url = requestURL(API.fetch_latestNews.raw)
     log.info("url: \(url)")
+    
+    self.setNetworkActivityIndicatorVisible()
+    
     return Promise { fulfill, reject in
       Alamofire.request(.GET, url)
         .validate()
@@ -57,7 +63,7 @@ public class AppClient: ZhihuAPI {
   
 }
 
-extension AppClient {
+internal extension AppClient {
   var baseUrl: String {
     if appDebug {
       return "http://news-at.zhihu.com/api/4"
@@ -67,5 +73,11 @@ extension AppClient {
   
   func requestURL(url: String?) -> String {
     return String(format: "%@%@", baseUrl, url!)
+  }
+  
+  func setNetworkActivityIndicatorVisible(visible: Bool = true) {
+    dispatch_async(dispatch_get_main_queue()) {
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = visible
+    }
   }
 }

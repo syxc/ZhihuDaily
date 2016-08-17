@@ -41,6 +41,17 @@ extension UINavigationController {
 }
 
 
+// MARK: - UIViewController
+
+extension UIViewController {
+  public func setNetworkActivityIndicatorVisible(visible: Bool = true) {
+    dispatch_async(dispatch_get_main_queue()) {
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = visible
+    }
+  }
+}
+
+
 // MARK: - UITableView
 
 extension UITableView {

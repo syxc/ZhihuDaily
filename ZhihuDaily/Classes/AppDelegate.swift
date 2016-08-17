@@ -8,6 +8,7 @@
 
 import UIKit
 import FYLogger
+import Alamofire
 import ChameleonFramework
 
 /* ---------- Debug model ---------- */

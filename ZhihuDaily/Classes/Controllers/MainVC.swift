@@ -20,6 +20,7 @@ class MainVC: BaseTableViewController {
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(self.searchTap))
     
     self.hud.show()
+    
     self.loadData()
   }
   
@@ -46,12 +47,15 @@ class MainVC: BaseTableViewController {
         client.fetchSplashScreen(SplashResolution._1080)
       }.then { dict -> Void in
         log.info("dict=\(dict)")
+        
         guard let splash = Mapper<Splash>().map(dict) else {
           return
         }
+        
         log.info("splash=\(splash.description)")
       }.always {
         self.hud.dismiss()
+        self.setNetworkActivityIndicatorVisible(false)
       }.error { error in
         log.error("error=\(error)")
     }
@@ -60,12 +64,15 @@ class MainVC: BaseTableViewController {
         client.fetchLatestNews()
       }.then { dict -> Void in
         log.info("dict=\(dict)")
+        
         guard let news = Mapper<LatestNews>().map(dict) else {
           return
         }
+        
         log.info("news=\(news.description)")
       }.always {
         self.hud.dismiss()
+        self.setNetworkActivityIndicatorVisible(false)
       }.error { error in
         log.error("error=\(error)")
     }
