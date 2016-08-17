@@ -70,5 +70,9 @@ class MainVC: BaseTableViewController {
   
   func searchTap() {
     log.info("searchTap...")
+    
+    let splash = Splash.getData()
+    
+    log.info("splash=\(splash.description)")
   }
 }

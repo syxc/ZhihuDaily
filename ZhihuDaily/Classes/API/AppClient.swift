@@ -40,6 +40,8 @@ public class AppClient: ZhihuAPI {
               return
             }
             
+            Splash.saveData(splash)
+            
             fulfill(splash)
           case .Failure(let error):
             reject(error)
