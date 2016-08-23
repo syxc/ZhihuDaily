@@ -29,6 +29,7 @@
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
 		4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */; };
 		4C9D4F501C7D8DFA00ABAE74 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */; };
+		4CAF4C201D6C5F1D00AAB0E6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF4C1F1D6C5F1D00AAB0E6 /* UserDefaults.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
 		4CB6F0851C12035D00E7EEA3 /* ZhihuDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0841C12035D00E7EEA3 /* ZhihuDailyUITests.swift */; };
@@ -83,6 +84,7 @@
 		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4CAF4C1F1D6C5F1D00AAB0E6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				4C3581AB1C786BC000AE58FF /* FYColors.swift */,
 				4C3581AC1C786BC000AE58FF /* SplashResolution.swift */,
 				4C6718E81C7AE8BE00A81610 /* FYError.swift */,
+				4CAF4C1F1D6C5F1D00AAB0E6 /* UserDefaults.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				4C3581C11C786BC000AE58FF /* Story.swift in Sources */,
 				4C3581BA1C786BC000AE58FF /* AppConstants.swift in Sources */,
 				4C3581BD1C786BC000AE58FF /* FYColors.swift in Sources */,
+				4CAF4C201D6C5F1D00AAB0E6 /* UserDefaults.swift in Sources */,
 				4C3581B41C786BC000AE58FF /* AppClient.swift in Sources */,
 				4C3581B51C786BC000AE58FF /* ZhihuAPI.swift in Sources */,
 				4C3581C01C786BC000AE58FF /* Splash.swift in Sources */,
@@ -660,7 +664,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.buybuychat.zhihudaily;
+				PRODUCT_BUNDLE_IDENTIFIER = org.syxc.zhihudaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZhihuDaily/Classes/ZhihuDaily-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -681,7 +685,7 @@
 				INFOPLIST_FILE = ZhihuDaily/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.buybuychat.zhihudaily;
+				PRODUCT_BUNDLE_IDENTIFIER = org.syxc.zhihudaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZhihuDaily/Classes/ZhihuDaily-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

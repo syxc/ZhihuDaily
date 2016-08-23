@@ -25,6 +25,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (3.5.0):
     - PromiseKit/CorePromise
+  - SwiftyUserDefaults (2.2.1)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift2.3`)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.2)
   - ObjectMapper (~> 1.1)
   - PromiseKit (= 3.5.0)
+  - SwiftyUserDefaults
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -52,7 +54,8 @@ SPEC CHECKSUMS:
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   OMGHTTPURLRQ: 1e54807cb7d5dbb506926e53498e1e9ac5720c79
   PromiseKit: 3a8a529c0571f8c2c423dba0897ff39bc060bf92
+  SwiftyUserDefaults: 7abdba50a50ea0c18ee8903af3c88e4c1cb8448d
 
-PODFILE CHECKSUM: 5a10422cadf8ec1363ec9b336a239454563b09ac
+PODFILE CHECKSUM: 9b2dcd429e915fc799984e6633a631aaeecab20f
 
 COCOAPODS: 1.0.1

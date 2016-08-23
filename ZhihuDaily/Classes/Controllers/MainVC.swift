@@ -43,17 +43,6 @@ class MainVC: BaseTableViewController {
     let client = AppClient.shareClient
     
     firstly {
-        client.fetchSplashScreen(SplashResolution._1080)
-      }.then { splash -> Void in
-        log.info("splash=\(splash.description)")
-      }.always {
-        self.hud.dismiss()
-        self.setNetworkActivityIndicatorVisible(false)
-      }.error { error in
-        log.error("error=\(error)")
-    }
-    
-    firstly {
         client.fetchLatestNews()
       }.then { news -> Void in
         log.info("news=\(news.description)")

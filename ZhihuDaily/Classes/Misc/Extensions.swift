@@ -52,6 +52,30 @@ extension UIViewController {
 }
 
 
+// MARK: - UIView
+
+extension UIView {
+  public func initializeBlurEffect() {
+    
+    let height = self.frame.size.height
+    let width = self.frame.size.width
+    let x = self.frame.origin.x
+    let y = self.frame.origin.y
+    
+    let blurEffect:UIBlurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+    let vibrancyEffect = UIVibrancyEffect(forBlurEffect: blurEffect)
+    
+    let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
+    let blurEffectView:UIVisualEffectView = UIVisualEffectView(effect: blurEffect)
+    
+    blurEffectView.frame = CGRectMake(x, y, width, height)
+    blurEffectView.contentView.addSubview(vibrancyEffectView)
+    
+    self.addSubview(blurEffectView)
+  }
+}
+
+
 // MARK: - UITableView
 
 extension UITableView {

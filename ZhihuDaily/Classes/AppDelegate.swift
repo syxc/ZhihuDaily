@@ -9,9 +9,8 @@
 import UIKit
 import FYLogger
 import Alamofire
+import PromiseKit
 import ChameleonFramework
-
-/* ---------- Debug model ---------- */
 
 /// 应用调试状态
 var appDebug: Bool {
@@ -20,6 +19,8 @@ var appDebug: Bool {
 
 /// 全局日志组件
 let log = FYLog()
+
+let Defaults = NSUserDefaults()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window!.makeKeyAndVisible()
     
     self.setupHUD()
+    self.setupLaunchView()
     
     return true
   }
@@ -75,4 +77,74 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func setupHUD() {
     log.info("setupHUD")
   }
+  
+  
+  // MARK: - LaunchView
+  
+  func setupLaunchView() {
+    if let imageData = Defaults[.launchImage] {
+      let splashView = UIView(frame: UIScreen.mainScreen().bounds)
+      
+      splashView.backgroundColor = UIColor.clearColor()
+      window?.addSubview(splashView)
+      window?.bringSubviewToFront(splashView)
+      
+      let splashImageView = UIImageView(frame: splashView.bounds)
+      
+      if let image = UIImage(data: imageData) {
+        splashImageView.image = image
+        splashView.addSubview(splashImageView)
+      }
+      
+      let labelRect = CGRect(x: 0, y: splashView.frame.height - 50, width: splashView.frame.width, height: 50)
+      
+      let splashTextView = UILabel(frame: labelRect)
+      splashTextView.textColor = UIColor.darkGrayColor()
+      splashTextView.textAlignment = NSTextAlignment.Center
+      
+      if let text = Defaults[.launchText] {
+        splashTextView.text = text
+        splashView.addSubview(splashTextView)
+      }
+      
+      UIView.animateWithDuration(3, delay: 0, options: .CurveEaseOut, animations: {
+          splashImageView.transform = CGAffineTransformMakeScale(1.05, 1.05)
+          splashView.alpha = 1
+        }, completion: { _ in
+          splashView.alpha = 0
+          splashImageView.removeFromSuperview()
+          splashTextView.removeFromSuperview()
+          splashView.removeFromSuperview()
+      })
+    }
+    
+    self.fetchLaunchImage()
+  }
+  
+  func fetchLaunchImage() {
+    let client = AppClient.shareClient
+    
+    firstly {
+        client.fetchSplashScreen(SplashResolution._1080)
+      }.then { splash -> Void in
+        log.info("splash=\(splash.description)")
+        
+        Defaults[.launchText] = splash.text
+        
+        request(.GET, splash.image).responseData(completionHandler: { (response) in
+          switch response.result {
+          case .Success(let data):
+            Defaults[.launchImage] = data
+          case .Failure(let error):
+            log.error("Fetch LaunchImage error=\(error)")
+          }
+        })
+        
+      }.always {
+        log.info("Fetch LaunchImage complete")
+      }.error { error in
+        log.error("Fetch SplashScreen error=\(error)")
+    }
+  }
+  
 }
