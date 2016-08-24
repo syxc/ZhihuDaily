@@ -25,14 +25,10 @@ enum SplashResolution: String {
   }
   
   var debugDescription: String {
-<<<<<<< HEAD:ZhihuDaily/Classes/SplashResolution.swift
     return "SplashResolution (rawValue: \(rawValue))"
   }
   
   var raw: String {
     return description
-=======
-    return "SplashResolution (rawValue: \(self.rawValue))"
->>>>>>> dev:ZhihuDaily/Classes/Misc/SplashResolution.swift
   }
 }

@@ -12,10 +12,6 @@ import PromiseKit
 /* typealias Callback = (AnyObject?, NSError?) -> Void */
 
 protocol ZhihuAPI {
-<<<<<<< HEAD:ZhihuDaily/Classes/ZhihuAPI.swift
-
-=======
->>>>>>> dev:ZhihuDaily/Classes/API/ZhihuAPI.swift
   /**
    获取启动图片信息
    
@@ -31,22 +27,12 @@ protocol ZhihuAPI {
    
    - returns: `Promise<NSDictionary>`
    */
-<<<<<<< HEAD:ZhihuDaily/Classes/ZhihuAPI.swift
-  static func fetchSplashScreen(resolution: SplashResolution?, callback: Callback)
-
-=======
   func fetchSplashScreen(resolution: SplashResolution) -> Promise<Splash>
   
->>>>>>> dev:ZhihuDaily/Classes/API/ZhihuAPI.swift
   /**
    获取最新消息
    
    - returns: `Promise<NSDictionary>`
    */
-<<<<<<< HEAD:ZhihuDaily/Classes/ZhihuAPI.swift
-  static func fetchLatestNews()
-
-=======
   func fetchLatestNews() -> Promise<LatestNews>
->>>>>>> dev:ZhihuDaily/Classes/API/ZhihuAPI.swift
 }

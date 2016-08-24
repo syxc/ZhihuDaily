@@ -26,17 +26,6 @@ let Defaults = NSUserDefaults()
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-<<<<<<< HEAD
-
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
-    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    self.window!.backgroundColor = UIColor.whiteColor()
-
-    let rootVC = RootViewController()
-    let nav = UINavigationController(rootViewController: rootVC)
-
-    self.window?.rootViewController = nav
-=======
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     self.setupLogger()
@@ -48,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let nav = FYNavigationController(rootViewController: mainVC)
     
     self.window!.rootViewController = nav
->>>>>>> dev
     self.window!.makeKeyAndVisible()
     
     self.setupHUD()
@@ -78,10 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-<<<<<<< HEAD
-
-
-=======
   
   
   // MARK: - Config
@@ -162,6 +146,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         log.error("Fetch SplashScreen error=\(error)")
     }
   }
-  
->>>>>>> dev
 }

@@ -10,25 +10,6 @@ import UIKit
 import ObjectMapper
 
 /// 启动界面图像
-<<<<<<< HEAD
-class Splash: NSObject {
-
-  /// 供显示的图片版权信息
-  let text: String
-
-  /// 图像的 URL
-  let image: String
-
-  init(text: String?, image: String?) {
-    self.text = text ?? ""
-    self.image = image ?? ""
-  }
-
-  override var description: String {
-    return "Text: \(text), Image: \(image)\n"
-  }
-
-=======
 struct Splash {
   /// 供显示的图片版权信息
   var text: String!
@@ -48,5 +29,4 @@ extension Splash: Mappable {
     text  <- map["text"]
     image <- map["img"]
   }
->>>>>>> dev
 }
