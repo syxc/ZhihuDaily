@@ -64,10 +64,7 @@
 		4C3B978C1C12146800AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C3B978E1C12146B00AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4C3B978F1C12146C00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		4C475E671C12E1E600D7CF17 /* ZhihuAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhihuAPI.swift; sourceTree = "<group>"; };
-		4C475E691C12E2EB00D7CF17 /* AppClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
-		4C7F86681C20754800D7FAA3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB6F0701C12035D00E7EEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,9 +193,6 @@
 		4CB6F0781C12035D00E7EEA3 /* ZhihuDailyTests */ = {
 			isa = PBXGroup;
 			children = (
-				4C475E671C12E1E600D7CF17 /* ZhihuAPI.swift */,
-				4C475E691C12E2EB00D7CF17 /* AppClient.swift */,
-				4C7F86681C20754800D7FAA3 /* API.swift */,
 				4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */,
 				4CB6F07B1C12035D00E7EEA3 /* Info.plist */,
 			);
@@ -236,14 +230,14 @@
 			isa = PBXGroup;
 			children = (
 				4CB73B891D6DEF6700668490 /* API */,
-				4CB73B8F1D6DEF6700668490 /* AppDelegate.swift */,
 				4CB73B911D6DEF6700668490 /* Controllers */,
 				4CB73B991D6DEF6700668490 /* Misc */,
 				4CB73BA01D6DEF6700668490 /* Models */,
-				4CB73BA51D6DEF6700668490 /* PreProcessorMacros.h */,
-				4CB73BA61D6DEF6700668490 /* PreProcessorMacros.m */,
 				4CB73BA71D6DEF6700668490 /* Views */,
 				4CB73BA81D6DEF6700668490 /* ZhihuDaily-Bridging-Header.h */,
+				4CB73BA51D6DEF6700668490 /* PreProcessorMacros.h */,
+				4CB73BA61D6DEF6700668490 /* PreProcessorMacros.m */,
+				4CB73B8F1D6DEF6700668490 /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
