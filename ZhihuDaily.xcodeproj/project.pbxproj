@@ -29,6 +29,8 @@
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
 		4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */; };
 		4C9D4F501C7D8DFA00ABAE74 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */; };
+		4CAC45611D6D90BA003EF3E2 /* XRCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC455F1D6D90BA003EF3E2 /* XRCarouselView.m */; };
+		4CAC45621D6D90BA003EF3E2 /* XRPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC45601D6D90BA003EF3E2 /* XRPlaceholder.png */; };
 		4CAF4C201D6C5F1D00AAB0E6 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF4C1F1D6C5F1D00AAB0E6 /* UserDefaults.swift */; };
 		4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */; };
 		4CB6F07A1C12035D00E7EEA3 /* ZhihuDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6F0791C12035D00E7EEA3 /* ZhihuDailyTests.swift */; };
@@ -84,6 +86,9 @@
 		4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		4C6718EE1C7B13DB00A81610 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		4C9D4F4F1C7D8DFA00ABAE74 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4CAC455E1D6D90BA003EF3E2 /* XRCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRCarouselView.h; sourceTree = "<group>"; };
+		4CAC455F1D6D90BA003EF3E2 /* XRCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRCarouselView.m; sourceTree = "<group>"; };
+		4CAC45601D6D90BA003EF3E2 /* XRPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XRPlaceholder.png; sourceTree = "<group>"; };
 		4CAF4C1F1D6C5F1D00AAB0E6 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		4CB6F0661C12035D00E7EEA3 /* ZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB6F06B1C12035D00E7EEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +141,7 @@
 		4C350F531C12A6A600818713 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4CAC455D1D6D90BA003EF3E2 /* XRCarouselView */,
 				4C6B09C21D61DA10006905FE /* Extensions */,
 			);
 			path = Vendor;
@@ -223,6 +229,16 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4CAC455D1D6D90BA003EF3E2 /* XRCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				4CAC455E1D6D90BA003EF3E2 /* XRCarouselView.h */,
+				4CAC455F1D6D90BA003EF3E2 /* XRCarouselView.m */,
+				4CAC45601D6D90BA003EF3E2 /* XRPlaceholder.png */,
+			);
+			path = XRCarouselView;
 			sourceTree = "<group>";
 		};
 		4CB6F05D1C12035D00E7EEA3 = {
@@ -406,6 +422,7 @@
 			files = (
 				4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */,
 				4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */,
+				4CAC45621D6D90BA003EF3E2 /* XRPlaceholder.png in Resources */,
 				4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */,
 				4CB6F06C1C12035D00E7EEA3 /* Assets.xcassets in Resources */,
 			);
@@ -491,6 +508,7 @@
 				4C6718E91C7AE8BE00A81610 /* FYError.swift in Sources */,
 				4C6718EF1C7B13DB00A81610 /* BaseTableViewController.swift in Sources */,
 				4C3581C21C786BC000AE58FF /* TopStory.swift in Sources */,
+				4CAC45611D6D90BA003EF3E2 /* XRCarouselView.m in Sources */,
 				4C187E6E1C7EE00B00D7609D /* PreProcessorMacros.m in Sources */,
 				4C3581B71C786BC000AE58FF /* BaseViewController.swift in Sources */,
 				4C3581C11C786BC000AE58FF /* Story.swift in Sources */,

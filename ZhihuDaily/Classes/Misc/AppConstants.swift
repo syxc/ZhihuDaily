@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import Device
 
 public struct AppConstants {
   
@@ -28,4 +29,11 @@ public struct AppConstants {
   static let HighlightColor = UIColor(red: 205/255, green: 223/255, blue: 243/255, alpha: 0.9)
   static let HighlightText = UIColor(red: 42/255, green: 121/255, blue: 213/255, alpha: 1.0)
   
+  static var HomeTopBannerHeight: CGFloat {
+    var bannerHeight: CGFloat = 150
+    if Device.isPhone() && Device.size() == Size.Screen5_5Inch {
+      bannerHeight += 16
+    }
+    return bannerHeight
+  }
 }

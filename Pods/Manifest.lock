@@ -3,6 +3,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - Device (1.0.3)
   - FYLogger (0.81)
   - MBProgressHUD (0.9.2)
   - ObjectMapper (1.4.0)
@@ -30,6 +31,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift2.3`)
   - ChameleonFramework/Swift
+  - Device (~> 1.0.3)
   - FYLogger
   - MBProgressHUD (~> 0.9.2)
   - ObjectMapper (~> 1.1)
@@ -49,6 +51,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Device: bcf333c7c497edabe6df9560fd64f1e255d45b2b
   FYLogger: 21844850378dc8c47460ad71aa278e8b026b6fdc
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
@@ -56,6 +59,6 @@ SPEC CHECKSUMS:
   PromiseKit: 3a8a529c0571f8c2c423dba0897ff39bc060bf92
   SwiftyUserDefaults: 7abdba50a50ea0c18ee8903af3c88e4c1cb8448d
 
-PODFILE CHECKSUM: 9b2dcd429e915fc799984e6633a631aaeecab20f
+PODFILE CHECKSUM: ec40a02dc60433a8ce052ea2f93d9d045e81e46d
 
 COCOAPODS: 1.0.1

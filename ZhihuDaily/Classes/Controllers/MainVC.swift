@@ -9,7 +9,16 @@
 import UIKit
 import PromiseKit
 
-class MainVC: BaseTableViewController {
+class MainVC: BaseTableViewController, XRCarouselViewDelegate {
+  
+  lazy var bannerView: XRCarouselView = {
+    let bannerView = XRCarouselView()
+    bannerView.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: AppConstants.HomeTopBannerHeight)
+    bannerView.clipsToBounds = true
+    bannerView.contentMode = .ScaleAspectFill
+    bannerView.changeMode = .Default
+    return bannerView
+  }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,7 +28,7 @@ class MainVC: BaseTableViewController {
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(self.searchTap))
     
     self.hud.show()
-    
+    self.setupView()
     self.loadData()
   }
   
@@ -37,6 +46,15 @@ class MainVC: BaseTableViewController {
   }
   
   
+  // MARK: Setup view
+  
+  func setupView() {
+    bannerView.delegate = self
+    bannerView.backgroundColor = UIColor.flatWhiteColor()
+    bannerView.imageArray = []
+  }
+  
+  
   // MARK: Load data
   
   func loadData() {
@@ -45,7 +63,30 @@ class MainVC: BaseTableViewController {
     firstly {
         client.fetchLatestNews()
       }.then { news -> Void in
-        log.info("news=\(news.description)")
+        log.info("news=\(news.top_stories)")
+        
+        var imageArray: [AnyObject] = []
+        var titleArray: [String] = []
+        
+        if let topStories = news.top_stories {
+          // 添加轮播图和标题
+          for topStory in topStories {
+            imageArray.append(topStory.image)
+            titleArray.append(topStory.title)
+          }
+          
+          self.bannerView.imageArray = imageArray
+          self.bannerView.describeArray = titleArray
+          
+          if imageArray.count > 0 {
+            self.tableView.tableHeaderView = self.bannerView
+          } else {
+            self.tableView.tableHeaderView = nil
+          }
+          // 刷新tableView
+          self.reloadData()
+        }
+        
       }.always {
         self.hud.dismiss()
         self.setNetworkActivityIndicatorVisible(false)
@@ -55,13 +96,23 @@ class MainVC: BaseTableViewController {
   }
   
   
+  // MARK: XRCarouselViewDelegate
+  
+  func carouselView(carouselView: XRCarouselView!, clickImageAtIndex index: Int) {
+    log.info("clickImageAtIndex=\(index)")
+  }
+  
+  
   // MARK: Other methods
   
   func searchTap() {
     log.info("searchTap...")
-    
-    let splash = Splash.getData()
-    
-    log.info("splash=\(splash.description)")
+  }
+  
+  
+  // MARK: deinit
+  
+  deinit {
+    bannerView.stopTimer()
   }
 }

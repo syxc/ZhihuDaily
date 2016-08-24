@@ -8,6 +8,7 @@ def pods
   pod 'ObjectMapper', '~> 1.1'
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'PromiseKit', '3.5.0'
+  pod 'Device', '~> 1.0.3'
   pod 'ChameleonFramework/Swift'
   pod 'SwiftyUserDefaults'
   pod 'FYLogger'
