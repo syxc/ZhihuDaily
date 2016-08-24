@@ -49,9 +49,9 @@ class MainVC: BaseTableViewController, XRCarouselViewDelegate {
   // MARK: Setup view
   
   func setupView() {
+    // bannerView
     bannerView.delegate = self
     bannerView.backgroundColor = UIColor.flatWhiteColor()
-    bannerView.imageArray = []
   }
   
   
@@ -65,26 +65,8 @@ class MainVC: BaseTableViewController, XRCarouselViewDelegate {
       }.then { news -> Void in
         log.info("news=\(news.top_stories)")
         
-        var imageArray: [AnyObject] = []
-        var titleArray: [String] = []
-        
         if let topStories = news.top_stories {
-          // 添加轮播图和标题
-          for topStory in topStories {
-            imageArray.append(topStory.image)
-            titleArray.append(topStory.title)
-          }
-          
-          self.bannerView.imageArray = imageArray
-          self.bannerView.describeArray = titleArray
-          
-          if imageArray.count > 0 {
-            self.tableView.tableHeaderView = self.bannerView
-          } else {
-            self.tableView.tableHeaderView = nil
-          }
-          // 刷新tableView
-          self.reloadData()
+          self.setupBannerData(topStories)
         }
         
       }.always {
@@ -100,6 +82,34 @@ class MainVC: BaseTableViewController, XRCarouselViewDelegate {
   
   func carouselView(carouselView: XRCarouselView!, clickImageAtIndex index: Int) {
     log.info("clickImageAtIndex=\(index)")
+  }
+  
+  
+  /**
+   初始化轮播图数据
+   
+   - parameter topStories: 轮播图数据
+   */
+  func setupBannerData(topStories: [TopStory]?) {
+    var imageArray: [AnyObject] = []
+    var titleArray: [String] = []
+    // 添加轮播图和标题
+    for topStory in topStories! {
+      imageArray.append(topStory.image)
+      titleArray.append(topStory.title)
+    }
+    
+    self.bannerView.imageArray = imageArray
+    self.bannerView.describeArray = titleArray
+    
+    if self.bannerView.imageArray.count > 0 {
+      self.tableView.tableHeaderView = self.bannerView
+    } else {
+      self.tableView.tableHeaderView = nil
+    }
+    
+    // 刷新tableView
+    self.reloadData()
   }
   
   
