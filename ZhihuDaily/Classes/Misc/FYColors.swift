@@ -10,5 +10,6 @@ import Foundation
 
 struct FYColors {
   /* Hex Color value */
-  static let theme = "#0767c8"
+  static let color_primary = "#2196f3"
+  static let color_primary_dark = "#1976d2"
 }

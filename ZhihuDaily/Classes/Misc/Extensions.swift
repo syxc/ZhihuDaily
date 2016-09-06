@@ -15,7 +15,11 @@ import ChameleonFramework
 
 extension UIColor {
   static func themeColor() -> UIColor {
-    return HexColor(FYColors.theme)
+    return HexColor(FYColors.color_primary)
+  }
+  
+  static func statusBarBackgroundColor() -> UIColor {
+    return HexColor(FYColors.color_primary_dark)
   }
   
   static func hudBackgroundColor() -> UIColor {
