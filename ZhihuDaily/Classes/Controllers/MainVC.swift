@@ -9,16 +9,10 @@
 import UIKit
 import PromiseKit
 
-class MainVC: BaseTableViewController, XRCarouselViewDelegate {
+class MainVC: BaseTableViewController {
   
-  lazy var bannerView: XRCarouselView = {
-    let bannerView = XRCarouselView()
-    bannerView.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: AppConstants.HomeTopBannerHeight)
-    bannerView.clipsToBounds = true
-    bannerView.contentMode = .ScaleAspectFill
-    bannerView.changeMode = .Default
-    return bannerView
-  }()
+  private var topStories: [TopStory]?
+  private var stories: [Story]?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -49,80 +43,98 @@ class MainVC: BaseTableViewController, XRCarouselViewDelegate {
   // MARK: Setup view
   
   func setupView() {
-    // bannerView
-    bannerView.delegate = self
-    bannerView.backgroundColor = UIColor.flatWhiteColor()
+    // Default
+    self.automaticallyAdjustsScrollViewInsets = true
+    
+    tableView.registerClass(HomeTopBannerCell.self, forCellReuseIdentifier: "BannerCell")
+    tableView.registerNib(UINib(nibName: "StoryCell", bundle: nil), forCellReuseIdentifier: "StoryCell")
   }
   
+  override func mj_headerRefresh() {
+    self.loadData()
+  }
   
   // MARK: Load data
   
   func loadData() {
     let client = AppClient.shareClient
     
+    weak var weakSelf = self
+    
     firstly {
         client.fetchLatestNews()
       }.then { news -> Void in
         log.info("news=\(news.top_stories)")
-        
         if let topStories = news.top_stories {
-          self.setupBannerData(topStories)
+          weakSelf!.topStories = topStories
         }
         
+        if let stories = news.stories {
+          weakSelf!.stories = stories
+        }
+        
+        weakSelf!.reloadData()
       }.always {
         self.hud.dismiss()
         self.setNetworkActivityIndicatorVisible(false)
+        self.mj_endRefreshing()
       }.error { error in
         log.error("error=\(error)")
     }
   }
   
   
-  // MARK: XRCarouselViewDelegate
+  // MARK: UITableViewDataSource
   
-  func carouselView(carouselView: XRCarouselView!, clickImageAtIndex index: Int) {
-    log.info("clickImageAtIndex=\(index)")
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 2
   }
   
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if section == 1 {
+      guard let stories = stories else {
+        return 0
+      }
+      return stories.count
+    }
+    return 1
+  }
   
-  /**
-   初始化轮播图数据
-   
-   - parameter topStories: 轮播图数据
-   */
-  func setupBannerData(topStories: [TopStory]?) {
-    var imageArray: [AnyObject] = []
-    var titleArray: [String] = []
-    // 添加轮播图和标题
-    for topStory in topStories! {
-      imageArray.append(topStory.image)
-      titleArray.append(topStory.title)
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    if indexPath.section == 0 {
+      let bannerCell = tableView.dequeueReusableCellWithIdentifier("BannerCell", forIndexPath: indexPath) as! HomeTopBannerCell
+      bannerCell.setupBannerData(topStories)
+      return bannerCell
     }
     
-    self.bannerView.imageArray = imageArray
-    self.bannerView.describeArray = titleArray
-    
-    if self.bannerView.imageArray.count > 0 {
-      self.tableView.tableHeaderView = self.bannerView
-    } else {
-      self.tableView.tableHeaderView = nil
+    if indexPath.section == 1 {
+      let cell = tableView.dequeueReusableCellWithIdentifier("StoryCell", forIndexPath: indexPath) as! StoryCell
+      cell.setupStory(stories![indexPath.row])
+      return cell
     }
     
-    // 刷新tableView
-    self.reloadData()
+    return UITableViewCell()
+  }
+  
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    if indexPath.section == 0 {
+      return AppConstants.HomeTopBannerHeight
+    }
+    return 97.0
   }
   
   
   // MARK: Other methods
   
   func searchTap() {
-    log.info("searchTap...")
+    log.info("searchTap...")    
+    self.navigationController?.pushViewController(AboutVC(), animated: true)
   }
   
   
   // MARK: deinit
   
   deinit {
-    bannerView.stopTimer()
+    
   }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3882C61D7EBEA60044F1F8 /* HomeTopBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3882C51D7EBEA60044F1F8 /* HomeTopBannerCell.swift */; };
+		4C3882C81D7EE0590044F1F8 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3882C71D7EE0590044F1F8 /* AboutVC.swift */; };
+		4C3882CB1D7EEF700044F1F8 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3882C91D7EEF700044F1F8 /* StoryCell.swift */; };
+		4C3882CC1D7EEF700044F1F8 /* StoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3882CA1D7EEF700044F1F8 /* StoryCell.xib */; };
 		4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B97861C12133100AEBC57 /* Launch Screen.storyboard */; };
 		4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B978D1C12146800AEBC57 /* Localizable.strings */; };
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
@@ -58,6 +62,10 @@
 /* Begin PBXFileReference section */
 		2F61A1F987D761038A77E1BF /* Pods-ZhihuDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.release.xcconfig"; sourceTree = "<group>"; };
 		30E8F4EF2524A09C679231A8 /* Pods_ZhihuDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhihuDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3882C51D7EBEA60044F1F8 /* HomeTopBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopBannerCell.swift; sourceTree = "<group>"; };
+		4C3882C71D7EE0590044F1F8 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		4C3882C91D7EEF700044F1F8 /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
+		4C3882CA1D7EEF700044F1F8 /* StoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCell.xib; sourceTree = "<group>"; };
 		4C3B97851C12133100AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97871C12134300AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97881C12134B00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -257,6 +265,7 @@
 			children = (
 				4CB73B921D6DEF6700668490 /* Base */,
 				4CB73B971D6DEF6700668490 /* MainVC.swift */,
+				4C3882C71D7EE0590044F1F8 /* AboutVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,6 +308,9 @@
 		4CB73BA71D6DEF6700668490 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C3882C51D7EBEA60044F1F8 /* HomeTopBannerCell.swift */,
+				4C3882C91D7EEF700044F1F8 /* StoryCell.swift */,
+				4C3882CA1D7EEF700044F1F8 /* StoryCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -421,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */,
+				4C3882CC1D7EEF700044F1F8 /* StoryCell.xib in Resources */,
 				4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */,
 				4CB73B871D6DEF5F00668490 /* XRPlaceholder.png in Resources */,
 				4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */,
@@ -503,9 +516,12 @@
 				4CB73BC01D6DEF6700668490 /* PreProcessorMacros.m in Sources */,
 				4CB73BB61D6DEF6700668490 /* AppConstants.swift in Sources */,
 				4CB73BBF1D6DEF6700668490 /* TopStory.swift in Sources */,
+				4C3882C81D7EE0590044F1F8 /* AboutVC.swift in Sources */,
+				4C3882C61D7EBEA60044F1F8 /* HomeTopBannerCell.swift in Sources */,
 				4CB73BAA1D6DEF6700668490 /* AppClient.swift in Sources */,
 				4CB73BA91D6DEF6700668490 /* API.swift in Sources */,
 				4CB73BB91D6DEF6700668490 /* FYError.swift in Sources */,
+				4C3882CB1D7EEF700044F1F8 /* StoryCell.swift in Sources */,
 				4CB73B861D6DEF5F00668490 /* XRCarouselView.m in Sources */,
 				4CB73BB11D6DEF6700668490 /* BaseViewController.swift in Sources */,
 				4CB73BBE1D6DEF6700668490 /* Story.swift in Sources */,

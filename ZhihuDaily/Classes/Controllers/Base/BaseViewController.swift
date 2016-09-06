@@ -10,22 +10,23 @@ import UIKit
 
 class BaseViewController: UIViewController {
   
-  var statusBarShouldLight = false
+  var statusBarShouldLight = true
   var animatedOnNavigationBar = true
   
   var hud: ProgressHUD!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.view.backgroundColor = UIColor.whiteColor()
     // Setup ProgressHUD
     self.hud = ProgressHUD(view: self.view)
   }
   
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     if statusBarShouldLight {
-      return UIStatusBarStyle.LightContent
+      return .LightContent
     }
-    return UIStatusBarStyle.Default
+    return .Default
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -56,7 +57,6 @@ class BaseViewController: UIViewController {
   }
   
   override func performSegueWithIdentifier(identifier: String, sender: AnyObject?) {
-    
     if let navigationController = navigationController {
       guard navigationController.topViewController == self else {
         return

@@ -53,6 +53,14 @@ extension UIViewController {
       UIApplication.sharedApplication().networkActivityIndicatorVisible = visible
     }
   }
+  
+  public func setStatusBarBackgroundColor(color: UIColor) {
+    guard let statusBar = UIApplication.sharedApplication()
+      .valueForKey("statusBarWindow")?.valueForKey("statusBar") as? UIView else {
+        return
+    }
+    statusBar.backgroundColor = color
+  }
 }
 
 

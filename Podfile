@@ -9,8 +9,10 @@ def pods
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'PromiseKit', '3.5.0'
   pod 'Device', '~> 1.0.3'
+  pod 'SDWebImage', '~>3.8'
   pod 'ChameleonFramework/Swift'
   pod 'SwiftyUserDefaults'
+  pod 'MJRefresh'
   pod 'FYLogger'
 end
 

@@ -107,17 +107,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashView.addSubview(splashTextView)
       }
       
-      self.setStatusBarBackgroundColor(UIColor.clearColor())
-      
       UIView.animateWithDuration(3, delay: 0, options: .CurveEaseOut, animations: {
-        splashImageView.transform = CGAffineTransformMakeScale(1.05, 1.05)
-        splashView.alpha = 1
+          splashImageView.transform = CGAffineTransformMakeScale(1.05, 1.05)
+          splashView.alpha = 1
         }, completion: { _ in
           splashView.alpha = 0
           splashImageView.removeFromSuperview()
           splashTextView.removeFromSuperview()
           splashView.removeFromSuperview()
-          self.setStatusBarBackgroundColor(UIColor.statusBarBackgroundColor())
       })
     }
     
@@ -148,15 +145,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }.error { error in
         log.error("Fetch SplashScreen error=\(error)")
     }
-  }
-}
-
-extension AppDelegate {
-  func setStatusBarBackgroundColor(color: UIColor) {
-    guard let statusBar = UIApplication.sharedApplication()
-      .valueForKey("statusBarWindow")?.valueForKey("statusBar") as? UIView else {
-        return
-    }
-    statusBar.backgroundColor = color
   }
 }
