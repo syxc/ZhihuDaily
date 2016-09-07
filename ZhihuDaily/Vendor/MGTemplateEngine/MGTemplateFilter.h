@@ -6,6 +6,8 @@
  *
  */
 
+#import <Foundation/Foundation.h>
+
 @protocol MGTemplateFilter <NSObject>
 
 - (NSArray *)filters;

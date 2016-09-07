@@ -74,6 +74,31 @@ public class AppClient: ZhihuAPI {
     }
   }
   
+  func fetchNewsDetail(id: String) -> Promise<News> {
+    let url = requestURL(String(format: API.fetch_news_detail.raw, id))
+    log.info("url: \(url)")
+    
+    self.setNetworkActivityIndicatorVisible()
+    
+    return Promise { fulfill, reject in
+      Alamofire.request(.GET, url)
+        .validate()
+        .responseJSON { response in
+          switch response.result {
+          case .Success(let dict):
+            log.info("dict=\(dict)")
+            
+            guard let newsItem = Mapper<News>().map(dict) else {
+              return
+            }
+            
+            fulfill(newsItem)
+          case .Failure(let error):
+            reject(error)
+          }
+      }
+    }
+  }
 }
 
 internal extension AppClient {

@@ -15,9 +15,10 @@ import Foundation
 enum API: String {
   /// 启动界面图像获取
   case fetch_splashScreen = "/start-image/%@"
-  
   /// 最新消息
   case fetch_latestNews = "/news/latest"
+  /// 新闻详情
+  case fetch_news_detail = "/news/%@"
 }
 
 extension API {

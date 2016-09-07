@@ -85,6 +85,47 @@ class MainVC: BaseTableViewController {
     }
   }
   
+  /**
+   获取新闻详情
+   
+   - parameter id: 新闻ID
+   */
+  func loadNewsDetail(id: String) {
+    let client = AppClient.shareClient
+    
+    weak var weakSelf = self
+    
+    firstly {
+      client.fetchNewsDetail(id)
+    }.then { newsItem -> Void in
+      log.info("newsItem=\(newsItem)")
+      if let newsItem: News = newsItem {
+        weakSelf!.renderNewsDetailTemplate(newsItem)
+      }
+    }.always {
+      self.setNetworkActivityIndicatorVisible(false)
+    }.error { error in
+      log.error("error=\(error)")
+    }
+  }
+  
+  func renderNewsDetailTemplate(newsItem: News) {
+    let webVC = FYWebViewController()
+    webVC.htmlString = loadHTMLByMGTemplateEngine(newsItem)
+    self.navigationController?.pushViewController(webVC, animated: true)
+  }
+  
+  func loadHTMLByMGTemplateEngine(data: News) -> String {
+    let templatePath = NSBundle.mainBundle().pathForResource("news", ofType: "html")
+    let engine = MGTemplateEngine.init()
+    engine.matcher = ICUTemplateMatcher(templateEngine: engine)
+    engine.setObject(data.title, forKey: "title")
+    engine.setObject(data.css[0], forKey: "css")
+    engine.setObject(data.share_url, forKey: "share_url")
+    engine.setObject(data.body, forKey: "content")
+    return engine.processTemplateInFileAtPath(templatePath, withVariables: nil)
+  }
+  
   
   // MARK: UITableViewDataSource
   
@@ -129,10 +170,11 @@ class MainVC: BaseTableViewController {
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     if indexPath.section == 1 {
       let story = stories![indexPath.row]
-      let webVC = FYWebViewController()
-      let urlString = "http://daily.zhihu.com/story/\(story.id)"
-      webVC.url = NSURL(string: urlString)
-      self.navigationController?.pushViewController(webVC, animated: true)
+      /* let webVC = FYWebViewController()
+       let urlString = "http://daily.zhihu.com/story/\(story.id)"
+       webVC.url = NSURL(string: urlString)
+       self.navigationController?.pushViewController(webVC, animated: true) */
+      loadNewsDetail("\(story.id)")
     }
     
     tableView.deselectRowAtIndexPath(indexPath, animated: true)

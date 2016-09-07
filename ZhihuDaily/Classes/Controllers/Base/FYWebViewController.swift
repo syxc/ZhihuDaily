@@ -35,12 +35,13 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
   
   private var estimatedProgress: Float = 0.0
   
-  private var webView: WKWebView?
-  
   // KVO
   private var webBrowserContext = 0
   
+  private var webView: WKWebView?
+  
   var url: NSURL?
+  var htmlString: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -91,13 +92,22 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
     progressView?.frame = CGRectMake(0, self.navigationController!.navigationBar.frame.size.height - progressView!.frame.size.height, self.view.frame.size.width, progressView!.frame.size.height)
     progressView?.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
     
-    assert(self.url != nil, "self.url is nil")
+    /* assert(self.url != nil, "self.url is nil") */
     
+    /* loadRequest */
     if (self.url != nil && self.url?.URLString.length > 0) {
       weak var weakSelf = self
       dispatch_async(dispatch_get_main_queue(), {
         let request = NSURLRequest(URL: weakSelf!.url!, cachePolicy: .ReturnCacheDataElseLoad, timeoutInterval: 30)
         weakSelf!.webView!.loadRequest(request)
+      })
+    }
+    
+    /* loadHTMLString */
+    if (self.htmlString != nil && self.htmlString?.length > 0) {
+      weak var weakSelf = self
+      dispatch_async(dispatch_get_main_queue(), {
+        weakSelf!.webView!.loadHTMLString((weakSelf?.htmlString)!, baseURL: nil)
       })
     }
   }

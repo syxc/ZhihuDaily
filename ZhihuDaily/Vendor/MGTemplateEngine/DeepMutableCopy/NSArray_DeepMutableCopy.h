@@ -5,6 +5,8 @@
 //  Copyright 2008 Instinctive Code. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 @interface NSArray (DeepMutableCopy)
 
 - (NSMutableArray *)deepMutableCopy;

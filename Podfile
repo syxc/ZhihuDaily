@@ -4,13 +4,12 @@ platform :ios, '8.0'
 use_frameworks!
 
 def pods
-  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift2.3'  
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift2.3'
   pod 'ObjectMapper', '~> 1.1'
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'PromiseKit', '3.5.0'
   pod 'Device', '~> 1.0.3'
   pod 'SDWebImage', '~>3.8'
-  pod 'GRMustache.swift', '~> 1.0'
   pod 'ChameleonFramework/Swift'
   pod 'SwiftyUserDefaults'
   pod 'MJRefresh'

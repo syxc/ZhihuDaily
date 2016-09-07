@@ -4,3 +4,5 @@
 
 #import "PreProcessorMacros.h"
 #import "XRCarouselView.h"
+#import "MGTemplateEngine.h"
+#import "ICUTemplateMatcher.h"

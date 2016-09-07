@@ -24,15 +24,22 @@ protocol ZhihuAPI {
    ```
    
    - parameter resolution: 图像分辨率
-   
-   - returns: `Promise<NSDictionary>`
+   - returns: `Promise<Splash>`
    */
   func fetchSplashScreen(resolution: SplashResolution) -> Promise<Splash>
   
   /**
    获取最新消息
    
-   - returns: `Promise<NSDictionary>`
+   - returns: `Promise<LatestNews>`
    */
   func fetchLatestNews() -> Promise<LatestNews>
+  
+  /**
+   获取新闻详情
+   
+   - parameter id: 新闻ID
+   - returns: `Promise<News>`
+   */
+  func fetchNewsDetail(id: String) -> Promise<News>
 }
