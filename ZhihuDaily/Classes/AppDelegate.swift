@@ -99,7 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let labelRect = CGRect(x: 0, y: splashView.frame.height - 50, width: splashView.frame.width, height: 50)
       
       let splashTextView = UILabel(frame: labelRect)
-      splashTextView.textColor = UIColor.darkGrayColor()
+      splashTextView.font = UIFont.systemFontOfSize(12)
+      splashTextView.textColor = UIColor.flatWhiteColorDark()
       splashTextView.textAlignment = NSTextAlignment.Center
       
       if let text = Defaults[.launchText] {

@@ -18,8 +18,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipD-7Q-fag" userLabel="Image">
                         <rect key="frame" x="16" y="10" width="77" height="77"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="77" id="UmF-qa-6Ue"/>
-                            <constraint firstAttribute="width" constant="77" id="jhT-WQ-wWn"/>
+                            <constraint firstAttribute="width" constant="77" id="Ifh-XY-AnM"/>
+                            <constraint firstAttribute="height" constant="77" id="kla-5f-g36"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-if-1ao" userLabel="Title">
@@ -29,13 +29,14 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="7aJ-xF-N10"/>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="BYT-oZ-XA9"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ipD-7Q-fag" secondAttribute="bottom" constant="2" id="Gnl-FF-mOQ"/>
-                    <constraint firstItem="9xD-if-1ao" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="oeG-8N-T6G"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="9xD-if-1ao" secondAttribute="bottom" constant="2" id="ohn-S0-qTh"/>
-                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="ipD-7Q-fag" secondAttribute="trailing" constant="16" id="qxg-Q3-aug"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="9xD-if-1ao" secondAttribute="trailing" constant="8" id="vh8-M5-TLC"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="3Nd-UY-d8b"/>
+                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="ipD-7Q-fag" secondAttribute="trailing" constant="16" id="CeM-so-Izu"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Evm-61-p3X"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ipD-7Q-fag" secondAttribute="bottom" constant="2" id="Hnc-dL-0Z7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9xD-if-1ao" secondAttribute="bottom" constant="2" id="NXQ-jK-gQq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9xD-if-1ao" secondAttribute="trailing" constant="8" id="X0a-UC-UOR"/>
+                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="ipD-7Q-fag" secondAttribute="trailing" constant="16" id="meF-un-NOq"/>
+                    <constraint firstItem="9xD-if-1ao" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="yqX-cS-j39"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

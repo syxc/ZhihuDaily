@@ -46,6 +46,9 @@ class MainVC: BaseTableViewController {
     // Default
     self.automaticallyAdjustsScrollViewInsets = true
     
+    tableView.estimatedRowHeight = 97.0
+    tableView.rowHeight = UITableViewAutomaticDimension
+    
     tableView.registerClass(HomeTopBannerCell.self, forCellReuseIdentifier: "BannerCell")
     tableView.registerNib(UINib(nibName: "StoryCell", bundle: nil), forCellReuseIdentifier: "StoryCell")
   }
@@ -102,7 +105,8 @@ class MainVC: BaseTableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
-      let bannerCell = tableView.dequeueReusableCellWithIdentifier("BannerCell", forIndexPath: indexPath) as! HomeTopBannerCell
+      let bannerCell = tableView.dequeueReusableCellWithIdentifier("BannerCell", forIndexPath: indexPath) as! HomeTopBannerCell      
+      bannerCell.hideSeparatorLine()
       bannerCell.setupBannerData(topStories)
       return bannerCell
     }

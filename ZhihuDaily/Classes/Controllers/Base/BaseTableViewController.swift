@@ -169,7 +169,7 @@ class BaseTableViewController: UITableViewController {
   func reloadData() {
     weak var weakSelf = self
     dispatch_async(dispatch_get_main_queue(), {
-      weakSelf!.tableView.reloadData()
+      weakSelf?.tableView.reloadData()
     })
   }
 }

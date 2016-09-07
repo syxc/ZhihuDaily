@@ -103,6 +103,18 @@ extension UITableView {
 }
 
 
+// MARK: - UITableViewCell
+
+extension UITableViewCell {
+  /**
+   Hide separator line on one UITableViewCell
+   */
+  public func hideSeparatorLine() {
+    self.separatorInset = UIEdgeInsets(top: 0, left: self.bounds.width, bottom: 0, right: 0)
+  }
+}
+
+
 // MARK: - String
 
 extension String {
