@@ -18,25 +18,24 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipD-7Q-fag" userLabel="Image">
                         <rect key="frame" x="16" y="10" width="77" height="77"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="77" id="QPw-la-Udf"/>
-                            <constraint firstAttribute="height" constant="77" id="YuM-Xu-czC"/>
+                            <constraint firstAttribute="height" constant="77" id="UmF-qa-6Ue"/>
+                            <constraint firstAttribute="width" constant="77" id="jhT-WQ-wWn"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-if-1ao" userLabel="Title">
-                        <rect key="frame" x="109" y="10" width="235" height="77"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="109" y="10" width="243" height="77"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="ipD-7Q-fag" secondAttribute="bottom" constant="2" id="1Im-Dj-jFD"/>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="top" secondItem="9xD-if-1ao" secondAttribute="top" id="9oR-Kg-Z5E"/>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="NIN-zg-2GX"/>
-                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="ipD-7Q-fag" secondAttribute="trailing" constant="16" id="cP9-zM-j7T"/>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="bottom" secondItem="9xD-if-1ao" secondAttribute="bottom" id="e9S-M1-DZT"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="9xD-if-1ao" secondAttribute="trailing" constant="16" id="oMV-4m-kEa"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="9xD-if-1ao" secondAttribute="bottom" constant="2" id="zSj-E4-bDC"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="7aJ-xF-N10"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="BYT-oZ-XA9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ipD-7Q-fag" secondAttribute="bottom" constant="2" id="Gnl-FF-mOQ"/>
+                    <constraint firstItem="9xD-if-1ao" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="oeG-8N-T6G"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9xD-if-1ao" secondAttribute="bottom" constant="2" id="ohn-S0-qTh"/>
+                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="ipD-7Q-fag" secondAttribute="trailing" constant="16" id="qxg-Q3-aug"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9xD-if-1ao" secondAttribute="trailing" constant="8" id="vh8-M5-TLC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
