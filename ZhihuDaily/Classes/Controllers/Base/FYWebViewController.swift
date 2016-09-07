@@ -125,9 +125,9 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
         }
       } else if (keyPath == "title" && object!.isEqual(self.webView)) {
         self.title = "\(value!)"
-      } else {
-        super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
       }
+    } else {
+      super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
     }
   }
   
