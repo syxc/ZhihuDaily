@@ -11,7 +11,7 @@ import MJRefresh
 
 class BaseTableViewController: UITableViewController {
   
-  var statusBarShouldLight = true
+  var statusBarShouldLight = false
   var animatedOnNavigationBar = true
   
   var hud: ProgressHUD!

@@ -11,6 +11,7 @@
 		4C3882C81D7EE0590044F1F8 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3882C71D7EE0590044F1F8 /* AboutVC.swift */; };
 		4C3882CB1D7EEF700044F1F8 /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3882C91D7EEF700044F1F8 /* StoryCell.swift */; };
 		4C3882CC1D7EEF700044F1F8 /* StoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3882CA1D7EEF700044F1F8 /* StoryCell.xib */; };
+		4C3882E11D80181F0044F1F8 /* FYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3882E01D80181F0044F1F8 /* FYWebViewController.swift */; };
 		4C3B97841C12133100AEBC57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B97861C12133100AEBC57 /* Launch Screen.storyboard */; };
 		4C3B978B1C12146800AEBC57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B978D1C12146800AEBC57 /* Localizable.strings */; };
 		4C6718ED1C7AF2C900A81610 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C6718EC1C7AF2C900A81610 /* ProgressHUD.bundle */; };
@@ -66,6 +67,7 @@
 		4C3882C71D7EE0590044F1F8 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		4C3882C91D7EEF700044F1F8 /* StoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 		4C3882CA1D7EEF700044F1F8 /* StoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCell.xib; sourceTree = "<group>"; };
+		4C3882E01D80181F0044F1F8 /* FYWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYWebViewController.swift; sourceTree = "<group>"; };
 		4C3B97851C12133100AEBC57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97871C12134300AEBC57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4C3B97881C12134B00AEBC57 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				4CB73B941D6DEF6700668490 /* BaseViewController.swift */,
 				4CB73B951D6DEF6700668490 /* FYNavigationController.swift */,
 				4CB73B961D6DEF6700668490 /* ProgressHUD.swift */,
+				4C3882E01D80181F0044F1F8 /* FYWebViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				4C3882CB1D7EEF700044F1F8 /* StoryCell.swift in Sources */,
 				4CB73B861D6DEF5F00668490 /* XRCarouselView.m in Sources */,
 				4CB73BB11D6DEF6700668490 /* BaseViewController.swift in Sources */,
+				4C3882E11D80181F0044F1F8 /* FYWebViewController.swift in Sources */,
 				4CB73BBE1D6DEF6700668490 /* Story.swift in Sources */,
 				4CB73BB81D6DEF6700668490 /* FYColors.swift in Sources */,
 				4CB73BBA1D6DEF6700668490 /* SplashResolution.swift in Sources */,

@@ -86,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let splashView = UIView(frame: UIScreen.mainScreen().bounds)
       
       splashView.backgroundColor = UIColor.clearColor()
+      window?.windowLevel = UIWindowLevelStatusBar
       window?.addSubview(splashView)
       window?.bringSubviewToFront(splashView)
       
@@ -108,6 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splashView.addSubview(splashTextView)
       }
       
+      weak var weakSelf = self
       UIView.animateWithDuration(3, delay: 0, options: .CurveEaseOut, animations: {
           splashImageView.transform = CGAffineTransformMakeScale(1.05, 1.05)
           splashView.alpha = 1
@@ -116,6 +118,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           splashImageView.removeFromSuperview()
           splashTextView.removeFromSuperview()
           splashView.removeFromSuperview()
+          weakSelf!.window?.windowLevel = 0.0
       })
     }
     

@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
   
-  var statusBarShouldLight = true
+  var statusBarShouldLight = false
   var animatedOnNavigationBar = true
   
   var hud: ProgressHUD!

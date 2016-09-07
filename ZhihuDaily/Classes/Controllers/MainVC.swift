@@ -16,7 +16,6 @@ class MainVC: BaseTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.statusBarShouldLight = true
     self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
     
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(self.searchTap))
@@ -127,6 +126,18 @@ class MainVC: BaseTableViewController {
     return 97.0
   }
   
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    if indexPath.section == 1 {
+      let story = stories![indexPath.row]
+      let webVC = FYWebViewController()
+      let urlString = "http://daily.zhihu.com/story/\(story.id)"
+      webVC.url = NSURL(string: urlString)
+      self.navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+  
   
   // MARK: Other methods
   
@@ -139,6 +150,7 @@ class MainVC: BaseTableViewController {
   // MARK: deinit
   
   deinit {
-    
+    tableView.dataSource = nil
+    tableView.delegate = nil
   }
 }

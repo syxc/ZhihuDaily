@@ -129,4 +129,8 @@ extension String {
   var lastPathComponent: String? {
     return ns.lastPathComponent
   }
+  
+  var length: Int {
+    return characters.count
+  }
 }

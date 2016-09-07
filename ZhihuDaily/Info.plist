@@ -27,7 +27,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 		<key>NSExceptionDomains</key>
-		<string> controller-based status bar appearance</string>
+		<string>controller-based status bar appearance</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
