@@ -17,8 +17,6 @@ class StoryCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
-    titleLabel.lineBreakMode = .ByTruncatingTail
-    titleLabel.numberOfLines = 0
   }
   
   override func setSelected(selected: Bool, animated: Bool) {

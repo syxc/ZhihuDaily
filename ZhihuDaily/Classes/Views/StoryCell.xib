@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,25 +18,25 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipD-7Q-fag" userLabel="Image">
                         <rect key="frame" x="16" y="10" width="77" height="77"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="77" id="gGN-kh-NMm"/>
-                            <constraint firstAttribute="height" constant="77" id="tev-Z1-CpL"/>
+                            <constraint firstAttribute="width" constant="77" id="QPw-la-Udf"/>
+                            <constraint firstAttribute="height" constant="77" id="YuM-Xu-czC"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-if-1ao" userLabel="Title">
-                        <rect key="frame" x="113" y="10" width="245" height="76.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-if-1ao" userLabel="Title">
+                        <rect key="frame" x="109" y="10" width="235" height="77"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="9xD-if-1ao" secondAttribute="trailing" constant="10" id="W64-lr-X4e"/>
-                    <constraint firstAttribute="bottom" secondItem="ipD-7Q-fag" secondAttribute="bottom" constant="10" id="eqc-wn-SDw"/>
-                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="113" id="jQb-GM-Ens"/>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nUb-EX-4Eh"/>
-                    <constraint firstItem="ipD-7Q-fag" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ufo-iG-hYI"/>
-                    <constraint firstAttribute="bottom" secondItem="9xD-if-1ao" secondAttribute="bottom" constant="10" id="uze-Kd-1bc"/>
-                    <constraint firstItem="9xD-if-1ao" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xrk-gi-w6G"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ipD-7Q-fag" secondAttribute="bottom" constant="2" id="1Im-Dj-jFD"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="top" secondItem="9xD-if-1ao" secondAttribute="top" id="9oR-Kg-Z5E"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="NIN-zg-2GX"/>
+                    <constraint firstItem="9xD-if-1ao" firstAttribute="leading" secondItem="ipD-7Q-fag" secondAttribute="trailing" constant="16" id="cP9-zM-j7T"/>
+                    <constraint firstItem="ipD-7Q-fag" firstAttribute="bottom" secondItem="9xD-if-1ao" secondAttribute="bottom" id="e9S-M1-DZT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9xD-if-1ao" secondAttribute="trailing" constant="16" id="oMV-4m-kEa"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9xD-if-1ao" secondAttribute="bottom" constant="2" id="zSj-E4-bDC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
