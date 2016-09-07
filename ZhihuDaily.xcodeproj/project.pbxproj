@@ -178,7 +178,6 @@
 			children = (
 				4C3882EE1D8088B40044F1F8 /* MGTemplateEngine */,
 				4CB73B821D6DEF5F00668490 /* XRCarouselView */,
-				4C6B09C21D61DA10006905FE /* Extensions */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -242,13 +241,6 @@
 				4C3882F81D8088B40044F1F8 /* ICUTemplateMatcher.m */,
 			);
 			path = RegexKitLite;
-			sourceTree = "<group>";
-		};
-		4C6B09C21D61DA10006905FE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4CB6F05D1C12035D00E7EEA3 = {

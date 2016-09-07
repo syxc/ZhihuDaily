@@ -122,6 +122,8 @@ class MainVC: BaseTableViewController {
     engine.setObject(data.title, forKey: "title")
     engine.setObject(data.css[0], forKey: "css")
     engine.setObject(data.share_url, forKey: "share_url")
+    engine.setObject(data.image, forKey: "image")
+    engine.setObject(data.image_source, forKey: "image_source")
     engine.setObject(data.body, forKey: "content")
     return engine.processTemplateInFileAtPath(templatePath, withVariables: nil)
   }

@@ -7,8 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="{{ css }}" />
     <link rel="canonical" href="{{ share_url }}" />
+    <style type="text/css">
+      #banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* https://css-tricks.com/almanac/properties/o/object-fit/ */
+      }
+    </style>
   </head>
   <body>
+    <!-- <h1 class="headline-title">{{ title }}</h1> -->
+    <!-- <span class="img-source">图片：{{ image_source }}</span> -->
+    <img id="banner" src="{{ image }}" alt=""/>
     {{ content }}
+    <script type="text/javascript">
+      (function() {
+        var imgDIV = document.getElementsByClassName("img-place-holder")[0];
+        var imgBanner = document.getElementById("banner");
+        imgDIV.appendChild(imgBanner);
+      }());
+    </script>
   </body>
 </html>

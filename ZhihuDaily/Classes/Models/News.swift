@@ -54,6 +54,9 @@ struct News {
   /// image_source
   var image_source: String!
   
+  /// image
+  var image: String!
+  
   /// body
   var body: String!
   
@@ -75,6 +78,7 @@ extension News: Mappable {
     js            <- map["js"]
     share_url     <- map["share_url"]
     image_source  <- map["image_source"]
+    image         <- map["image"]
     body          <- map["body"]
   }
 }
