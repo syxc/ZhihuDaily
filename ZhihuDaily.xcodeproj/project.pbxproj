@@ -48,6 +48,7 @@
 		4CB73BBE1D6DEF6700668490 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73BA31D6DEF6700668490 /* Story.swift */; };
 		4CB73BBF1D6DEF6700668490 /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73BA41D6DEF6700668490 /* TopStory.swift */; };
 		4CB73BC01D6DEF6700668490 /* PreProcessorMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73BA61D6DEF6700668490 /* PreProcessorMacros.m */; };
+		4CDFC9351D81411400FB93F5 /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFC9341D81411400FB93F5 /* NewsDetailVC.swift */; };
 		CE292D3D5F27861E9DA94703 /* Pods_ZhihuDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E8F4EF2524A09C679231A8 /* Pods_ZhihuDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +135,7 @@
 		4CB73BA51D6DEF6700668490 /* PreProcessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreProcessorMacros.h; sourceTree = "<group>"; };
 		4CB73BA61D6DEF6700668490 /* PreProcessorMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreProcessorMacros.m; sourceTree = "<group>"; };
 		4CB73BA81D6DEF6700668490 /* ZhihuDaily-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhihuDaily-Bridging-Header.h"; sourceTree = "<group>"; };
+		4CDFC9341D81411400FB93F5 /* NewsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 		83B9F7147E7BDED4C7B287D0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA542ACBA334559C52084BB7 /* Pods-ZhihuDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -349,6 +351,7 @@
 				4CB73B921D6DEF6700668490 /* Base */,
 				4CB73B971D6DEF6700668490 /* MainVC.swift */,
 				4C3882C71D7EE0590044F1F8 /* AboutVC.swift */,
+				4CDFC9341D81411400FB93F5 /* NewsDetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				4CB73BC01D6DEF6700668490 /* PreProcessorMacros.m in Sources */,
 				4CB73BB61D6DEF6700668490 /* AppConstants.swift in Sources */,
 				4CB73BBF1D6DEF6700668490 /* TopStory.swift in Sources */,
+				4CDFC9351D81411400FB93F5 /* NewsDetailVC.swift in Sources */,
 				4C3882C81D7EE0590044F1F8 /* AboutVC.swift in Sources */,
 				4C3882C61D7EBEA60044F1F8 /* HomeTopBannerCell.swift in Sources */,
 				4CB73BAA1D6DEF6700668490 /* AppClient.swift in Sources */,

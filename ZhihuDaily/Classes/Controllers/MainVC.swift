@@ -9,6 +9,9 @@
 import UIKit
 import PromiseKit
 
+/**
+ 首页
+ */
 class MainVC: BaseTableViewController {
   
   private var topStories: [TopStory]?
@@ -110,9 +113,9 @@ class MainVC: BaseTableViewController {
   }
   
   func renderNewsDetailTemplate(newsItem: News) {
-    let webVC = FYWebViewController()
-    webVC.htmlString = loadHTMLByMGTemplateEngine(newsItem)
-    self.navigationController?.pushViewController(webVC, animated: true)
+    let newsDetailVC = NewsDetailVC()
+    newsDetailVC.htmlString = loadHTMLByMGTemplateEngine(newsItem)
+    self.navigationController?.pushViewController(newsDetailVC, animated: true)
   }
   
   func loadHTMLByMGTemplateEngine(data: News) -> String {

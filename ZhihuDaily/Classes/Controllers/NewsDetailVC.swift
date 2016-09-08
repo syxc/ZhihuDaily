@@ -1,5 +1,5 @@
 //
-//  AboutVC.swift
+//  NewsDetailVC.swift
 //  ZhihuDaily
 //
 //  Copyright (c) 2016年 syxc
@@ -26,21 +26,20 @@
 import UIKit
 
 /**
- 关于
+ 新闻详情
  */
-class AboutVC: BaseViewController {
+class NewsDetailVC: FYWebViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.title = "关于"
   }
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
   }
   
-  deinit {
-    
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
   }
 }
-
