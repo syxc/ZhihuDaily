@@ -12,18 +12,18 @@ import ObjectMapper
 /// 当日新闻
 struct Story {
   /// 新闻标题
-  var title: String!
+  var title: String?
   
   /// 供 Google Analytics 使用
-  var ga_prefix: String!
+  var ga_prefix: String?
   
   /// 图像地址
-  var images: [String]!
+  var images: [String]?
   
-  var type: Int!
+  var type: Int?
   
   /// url 与 share_url 中最后的数字（应为内容的 id）
-  var id: Int!
+  var id: Int?
   
   var description: String {
     return "Title: \(title), GA_Prefix: \(ga_prefix), Images: \(images), Type: \(type), Id: \(id)\n"

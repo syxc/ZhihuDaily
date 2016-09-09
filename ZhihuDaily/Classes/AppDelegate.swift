@@ -135,7 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Defaults[.launchText] = splash.text
         
-        request(.GET, splash.image).responseData(completionHandler: { (response) in
+        request(.GET, splash.image!).responseData(completionHandler: { (response) in
           switch response.result {
           case .Success(let data):
             Defaults[.launchImage] = data

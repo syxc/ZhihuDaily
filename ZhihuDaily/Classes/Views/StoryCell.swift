@@ -34,7 +34,7 @@ class StoryCell: UITableViewCell {
     let block: SDWebImageCompletionBlock! = {(image: UIImage!, error: NSError!, cacheType: SDImageCacheType!, imageURL: NSURL!) -> Void in
     }
     
-    let url = NSURL(string: story.images[0])
+    let url = NSURL(string: story.images![0])
     itemImageView.sd_setImageWithURL(url, placeholderImage: UIImage(), completed: block)
   }
   

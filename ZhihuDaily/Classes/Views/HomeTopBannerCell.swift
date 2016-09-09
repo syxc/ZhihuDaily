@@ -80,8 +80,8 @@ class HomeTopBannerCell: UITableViewCell, XRCarouselViewDelegate {
     var titleArray: [String] = []
     // 添加轮播图和标题
     for topStory in topStories {
-      imageArray.append(topStory.image)
-      titleArray.append(topStory.title)
+      imageArray.append(topStory.image!)
+      titleArray.append(topStory.title!)
     }
     
     bannerView.imageArray = imageArray

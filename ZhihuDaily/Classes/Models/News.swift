@@ -29,36 +29,36 @@ import ObjectMapper
 /// 新闻条目
 struct News {
   /// 新闻标题
-  var title: String!
+  var title: String?
   
   /// 供 Google Analytics 使用
-  var ga_prefix: String!
+  var ga_prefix: String?
   
   /// 图像地址
-  var images: [String]!
+  var images: [String]?
   
-  var type: Int!
+  var type: Int?
   
   /// url 与 share_url 中最后的数字（应为内容的 id）
-  var id: Int!
+  var id: Int?
   
   /// css
-  var css: [String]!
+  var css: [String]?
   
   /// js
-  var js: [String]!
+  var js: [String]?
   
   /// share_url
-  var share_url: String!
+  var share_url: String?
   
   /// image_source
-  var image_source: String!
+  var image_source: String?
   
   /// image
-  var image: String!
+  var image: String?
   
   /// body
-  var body: String!
+  var body: String?
   
   var description: String {
     return "Title: \(title), GA_Prefix: \(ga_prefix), Images: \(images), Type: \(type), Id: \(id)\n"

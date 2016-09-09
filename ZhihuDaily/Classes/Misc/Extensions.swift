@@ -11,6 +11,19 @@ import UIKit
 import MBProgressHUD
 import ChameleonFramework
 
+// MARK: - NSObject
+
+extension NSObject {
+  public func objectOrBlank(object: AnyObject?) -> AnyObject {
+    if object != nil {
+      return object!
+    }
+    print("\n--- Doesn’t contain a object ---\n")
+    return ""
+  }
+}
+
+
 // MARK: - UIColor
 
 extension UIColor {

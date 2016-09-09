@@ -13,9 +13,9 @@ import ObjectMapper
 struct LatestNews {
   var date: String!
   
-  var stories: [Story]!
+  var stories: [Story]?
   
-  var top_stories: [TopStory]!
+  var top_stories: [TopStory]?
   
   var description: String {
     return "Date: \(date), Stories: \(stories), TopStory: \(top_stories)\n"

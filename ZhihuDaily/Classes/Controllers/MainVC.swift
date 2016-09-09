@@ -122,12 +122,12 @@ class MainVC: BaseTableViewController {
     let templatePath = NSBundle.mainBundle().pathForResource("news", ofType: "html")
     let engine = MGTemplateEngine.init()
     engine.matcher = ICUTemplateMatcher(templateEngine: engine)
-    engine.setObject(data.title, forKey: "title")
-    engine.setObject(data.css[0], forKey: "css")
-    engine.setObject(data.share_url, forKey: "share_url")
-    engine.setObject(data.image, forKey: "image")
-    engine.setObject(data.image_source, forKey: "image_source")
-    engine.setObject(data.body, forKey: "content")
+    engine.setObject(objectOrBlank(data.title), forKey: "title")
+    engine.setObject(objectOrBlank(data.css![0]), forKey: "css")
+    engine.setObject(objectOrBlank(data.share_url), forKey: "share_url")
+    engine.setObject(objectOrBlank(data.image), forKey: "image")
+    engine.setObject(objectOrBlank(data.image_source), forKey: "image_source")
+    engine.setObject(objectOrBlank(data.body), forKey: "content")
     return engine.processTemplateInFileAtPath(templatePath, withVariables: nil)
   }
   
@@ -176,10 +176,10 @@ class MainVC: BaseTableViewController {
     if indexPath.section == 1 {
       let story = stories![indexPath.row]
       /* let webVC = FYWebViewController()
-       let urlString = "http://daily.zhihu.com/story/\(story.id)"
+       let urlString = "http://daily.zhihu.com/story/\(story.id!)"
        webVC.url = NSURL(string: urlString)
        self.navigationController?.pushViewController(webVC, animated: true) */
-      loadNewsDetail("\(story.id)")
+      loadNewsDetail("\(story.id!)")
     }
     
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
