@@ -81,7 +81,6 @@ extension UIViewController {
 
 extension UIView {
   public func initializeBlurEffect() {
-    
     let height = self.frame.size.height
     let width = self.frame.size.width
     let x = self.frame.origin.x
