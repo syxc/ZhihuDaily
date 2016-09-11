@@ -189,10 +189,10 @@ class MainVC: BaseTableViewController {
   // MARK: Other methods
   
   func searchTap() {
-    log.info("searchTap...")    
-    self.navigationController?.pushViewController(AboutVC(), animated: true)
+    log.info("searchTap...")
+    let scheme_about = scheme(FYScheme.About)
+    UIApplication.sharedApplication().openURL(NSURL(string: scheme_about)!)
   }
-  
   
   // MARK: deinit
   

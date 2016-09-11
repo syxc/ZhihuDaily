@@ -54,5 +54,16 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>org.syxc.zhihudaily</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fyzhihudaily</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

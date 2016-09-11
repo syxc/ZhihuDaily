@@ -49,6 +49,7 @@
 		4CB73BBF1D6DEF6700668490 /* TopStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73BA41D6DEF6700668490 /* TopStory.swift */; };
 		4CB73BC01D6DEF6700668490 /* PreProcessorMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB73BA61D6DEF6700668490 /* PreProcessorMacros.m */; };
 		4CDFC9351D81411400FB93F5 /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFC9341D81411400FB93F5 /* NewsDetailVC.swift */; };
+		4CFA254E1D82D5520015AAA1 /* FYScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFA254D1D82D5520015AAA1 /* FYScheme.swift */; };
 		CE292D3D5F27861E9DA94703 /* Pods_ZhihuDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E8F4EF2524A09C679231A8 /* Pods_ZhihuDaily.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		4CB73BA61D6DEF6700668490 /* PreProcessorMacros.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreProcessorMacros.m; sourceTree = "<group>"; };
 		4CB73BA81D6DEF6700668490 /* ZhihuDaily-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZhihuDaily-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CDFC9341D81411400FB93F5 /* NewsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
+		4CFA254D1D82D5520015AAA1 /* FYScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYScheme.swift; sourceTree = "<group>"; };
 		83B9F7147E7BDED4C7B287D0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA542ACBA334559C52084BB7 /* Pods-ZhihuDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhihuDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhihuDaily/Pods-ZhihuDaily.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -377,6 +379,7 @@
 				4CB73B9D1D6DEF6700668490 /* FYError.swift */,
 				4CB73B9E1D6DEF6700668490 /* SplashResolution.swift */,
 				4CB73B9F1D6DEF6700668490 /* UserDefaults.swift */,
+				4CFA254D1D82D5520015AAA1 /* FYScheme.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CB73BB21D6DEF6700668490 /* FYNavigationController.swift in Sources */,
+				4CFA254E1D82D5520015AAA1 /* FYScheme.swift in Sources */,
 				4CB73BB01D6DEF6700668490 /* BaseTableViewController.swift in Sources */,
 				4CB73BB31D6DEF6700668490 /* ProgressHUD.swift in Sources */,
 				4C3883041D8088B40044F1F8 /* MGTemplateEngine.m in Sources */,

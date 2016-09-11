@@ -151,3 +151,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   }
 }
+
+extension AppDelegate {
+  func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+    if url.scheme == fyScheme {
+      log.info("url.scheme=\(url.absoluteString!), url.host=\(url.host!)")
+      
+      guard let host = url.host else {
+        return false
+      }
+      
+      if host == FYScheme.About.raw {
+        guard let nav = UIApplication.topViewController()?.navigationController else {
+          return false
+        }
+        nav.pushViewController(AboutVC(), animated: true)
+      }
+      
+      return true
+    }
+    return false
+  }
+}
