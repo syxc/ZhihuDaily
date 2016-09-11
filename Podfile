@@ -4,7 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 def pods
-  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'swift2.3'
+  pod 'Alamofire', '3.5.0' # Swift 2.3 Support and Bug Fixes
   pod 'ObjectMapper', '~> 1.1'
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'PromiseKit', '3.5.0'

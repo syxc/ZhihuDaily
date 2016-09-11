@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.4.1)
+  - Alamofire (3.5.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
@@ -33,7 +33,7 @@ PODS:
   - SwiftyUserDefaults (2.2.1)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift2.3`)
+  - Alamofire (= 3.5.0)
   - ChameleonFramework/Swift
   - Device (~> 1.0.3)
   - FYLogger
@@ -44,18 +44,8 @@ DEPENDENCIES:
   - SDWebImage (~> 3.8)
   - SwiftyUserDefaults
 
-EXTERNAL SOURCES:
-  Alamofire:
-    :branch: swift2.3
-    :git: https://github.com/Alamofire/Alamofire.git
-
-CHECKOUT OPTIONS:
-  Alamofire:
-    :commit: 7ccd5639c84a9994c88ef630aac51e77f37756e9
-    :git: https://github.com/Alamofire/Alamofire.git
-
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Device: bcf333c7c497edabe6df9560fd64f1e255d45b2b
   FYLogger: 21844850378dc8c47460ad71aa278e8b026b6fdc
@@ -67,6 +57,6 @@ SPEC CHECKSUMS:
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SwiftyUserDefaults: 7abdba50a50ea0c18ee8903af3c88e4c1cb8448d
 
-PODFILE CHECKSUM: fc696d908fc8fdf9a330702200455d634bee0594
+PODFILE CHECKSUM: e01cc56c754d3cd44ac2a98dfe45504cdaa80dc3
 
 COCOAPODS: 1.0.1
