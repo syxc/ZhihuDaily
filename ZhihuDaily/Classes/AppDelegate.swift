@@ -171,6 +171,7 @@ extension AppDelegate {
         guard let queryDict: NSDictionary = parseQueryString(url.query!) else {
           return false
         }
+        log.info("queryDict=\(queryDict)")
         let detailVC = NewsDetailVC()
         detailVC.newsID = queryDict["id"] as? String
         navigation.pushViewController(detailVC, animated: true)
