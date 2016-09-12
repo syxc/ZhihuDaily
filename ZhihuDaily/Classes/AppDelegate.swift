@@ -155,21 +155,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
     if url.scheme == fyScheme {
-      log.info("url.scheme=\(url.absoluteString!), url.host=\(url.host!)")
+      log.info("url.scheme=\(url.absoluteString!), url.host=\(url.host!), url.query=\(url.query)")
       
       guard let host = url.host else {
         return false
       }
       
-      if host == FYScheme.About.raw {
-        guard let nav = UIApplication.topViewController()?.navigationController else {
+      guard let navigation = UIApplication.topViewController()?.navigationController else {
+        return false
+      }
+      
+      if (host == FYScheme.About.raw) {
+        navigation.pushViewController(AboutVC(), animated: true)
+      } else if (host == FYScheme.News_Detail.raw) {
+        guard let queryDict: NSDictionary = parseQueryString(url.query!) else {
           return false
         }
-        nav.pushViewController(AboutVC(), animated: true)
+        let detailVC = NewsDetailVC()
+        detailVC.newsID = queryDict["id"] as? String
+        navigation.pushViewController(detailVC, animated: true)
       }
       
       return true
     }
     return false
+  }
+  
+  func parseQueryString(query: String) -> NSDictionary {
+    let dict = NSMutableDictionary()
+    let pairs = query.componentsSeparatedByString("&")
+    for pair in pairs {
+      let elements = pair.componentsSeparatedByString("=")
+      let key = elements[0].stringByRemovingPercentEncoding
+      let val = elements[1].stringByRemovingPercentEncoding
+      dict.setObject(val ?? "", forKey: key ?? "")
+    }
+    return dict
   }
 }

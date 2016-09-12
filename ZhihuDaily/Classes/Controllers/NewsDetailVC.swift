@@ -24,14 +24,21 @@
 //
 
 import UIKit
+import PromiseKit
 
 /**
  新闻详情
  */
 class NewsDetailVC: FYWebViewController {
   
+  var newsID: String?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    if newsID != nil && newsID?.length > 0 {
+      loadNewsDetail(newsID!)
+    }
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -41,5 +48,52 @@ class NewsDetailVC: FYWebViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  deinit {
+    
+  }
+  
+  
+  /**
+   获取新闻详情
+   
+   - parameter id: 新闻ID
+   */
+  private func loadNewsDetail(id: String) {
+    let client = AppClient.shareClient
+    
+    weak var weakSelf = self
+    
+    firstly {
+        client.fetchNewsDetail(id)
+      }.then { newsItem -> Void in
+        log.info("newsItem=\(newsItem)")
+        if let newsItem: News = newsItem {
+          weakSelf!.renderNewsDetailTemplate(newsItem)
+        }
+      }.always {
+        self.setNetworkActivityIndicatorVisible(false)
+      }.error { error in
+        log.error("error=\(error)")
+    }
+  }
+  
+  private func renderNewsDetailTemplate(newsItem: News) {
+    self.htmlString = loadHTMLByMGTemplateEngine(newsItem)
+    self.loadHTMLString(self.htmlString)
+  }
+  
+  private func loadHTMLByMGTemplateEngine(data: News) -> String {
+    let templatePath = NSBundle.mainBundle().pathForResource("news", ofType: "html")
+    let engine = MGTemplateEngine.init()
+    engine.matcher = ICUTemplateMatcher(templateEngine: engine)
+    engine.setObject(objectOrBlank(data.title), forKey: "title")
+    engine.setObject(objectOrBlank(data.css![0]), forKey: "css")
+    engine.setObject(objectOrBlank(data.share_url), forKey: "share_url")
+    engine.setObject(objectOrBlank(data.image), forKey: "image")
+    engine.setObject(objectOrBlank(data.image_source), forKey: "image_source")
+    engine.setObject(objectOrBlank(data.body), forKey: "content")
+    return engine.processTemplateInFileAtPath(templatePath, withVariables: nil)
   }
 }

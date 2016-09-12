@@ -38,8 +38,7 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
   // KVO
   private var webBrowserContext = 0
   
-  private var webView: WKWebView?
-  
+  var webView: WKWebView?
   var url: NSURL?
   var htmlString: String?
   
@@ -91,23 +90,28 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
     progressView?.trackTintColor = UIColor.clearColor()
     progressView?.frame = CGRectMake(0, self.navigationController!.navigationBar.frame.size.height - progressView!.frame.size.height, self.view.frame.size.width, progressView!.frame.size.height)
     progressView?.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
-    
-    /* assert(self.url != nil, "self.url is nil") */
-    
-    /* loadRequest */
-    if (self.url != nil && self.url?.URLString.length > 0) {
+  }
+  
+  
+  // MARK: - Load methods
+  
+  func loadRequestByURL(url: NSURL?) {
+    assert(url != nil, "url is nil")
+    if (url != nil && url?.URLString.length > 0) {
       weak var weakSelf = self
       dispatch_async(dispatch_get_main_queue(), {
-        let request = NSURLRequest(URL: weakSelf!.url!, cachePolicy: .ReturnCacheDataElseLoad, timeoutInterval: 30)
+        let request = NSURLRequest(URL: url!, cachePolicy: .ReturnCacheDataElseLoad, timeoutInterval: 30)
         weakSelf!.webView!.loadRequest(request)
       })
     }
-    
-    /* loadHTMLString */
-    if (self.htmlString != nil && self.htmlString?.length > 0) {
+  }
+  
+  func loadHTMLString(htmlString: String?) {
+    assert(htmlString != nil, "htmlString is nil")
+    if (htmlString != nil && htmlString?.length > 0) {
       weak var weakSelf = self
       dispatch_async(dispatch_get_main_queue(), {
-        weakSelf!.webView!.loadHTMLString((weakSelf?.htmlString)!, baseURL: nil)
+        weakSelf!.webView!.loadHTMLString(htmlString!, baseURL: nil)
       })
     }
   }
@@ -128,7 +132,7 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
         if (self.webView?.estimatedProgress >= 1.0) {
           weak var weakSelf = self
           UIView.animateWithDuration(0.3, delay: 0.3, options: .CurveEaseOut, animations: {
-              weakSelf?.progressView?.alpha = 0.0
+            weakSelf?.progressView?.alpha = 0.0
             }, completion: { _ in
               weakSelf?.progressView?.setProgress(0.0, animated: false)
           })
@@ -182,5 +186,4 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
       
     }
   }
-  
 }
