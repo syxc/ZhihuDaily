@@ -41,7 +41,6 @@
 static NSString *cache;
 
 @implementation XRCarouselView
-
 #pragma mark- 初始化方法
 //创建用来缓存图片的文件夹
 + (void)initialize {
@@ -342,7 +341,7 @@ static NSString *cache;
   NSString *urlString = _imageArray[index];
   NSString *imageName = [urlString stringByReplacingOccurrencesOfString:@"/" withString:@""];
   NSString *path = [cache stringByAppendingPathComponent:imageName];
-  if (_autoCache) { //如果开启的缓存功能，先从沙盒中取图片
+  if (_autoCache) { //如果开启了缓存功能，先从沙盒中取图片
     NSData *data = [NSData dataWithContentsOfFile:path];
     if (data) {
       _images[index] = getImageWithData(data);
@@ -434,7 +433,6 @@ float durationWithSourceAtIndex(CGImageSourceRef source, NSUInteger index) {
   CGFloat offsetX = scrollView.contentOffset.x;
   //滚动过程中改变pageControl的当前页码
   [self changeCurrentPageWithOffset:offsetX];
-  
   //向右滚动
   if (offsetX < self.width * 2) {
     if (_changeMode == ChangeModeFade) {
@@ -485,10 +483,11 @@ float durationWithSourceAtIndex(CGImageSourceRef source, NSUInteger index) {
 //该方法用来修复滚动过快导致分页异常的bug
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
   if (_changeMode == ChangeModeFade) return;
-  CGPoint pointInSelf = [_scrollView convertPoint:_otherImageView.frame.origin toView:self];
-  if (ABS(pointInSelf.x) != self.width) {
-    CGFloat offsetX = _scrollView.contentOffset.x + pointInSelf.x;
-    [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+  CGPoint currPointInSelf = [_scrollView convertPoint:_currImageView.frame.origin toView:self];
+  if (currPointInSelf.x >= -self.width / 2 && currPointInSelf.x <= self.width / 2) {
+    [self.scrollView setContentOffset:CGPointMake(self.width * 2, 0) animated:YES];
+  } else {
+    [self changeToNext];
   }
 }
 
