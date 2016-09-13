@@ -135,7 +135,7 @@ class MainVC: BaseTableViewController {
         return
       }
       
-      guard let scheme_detail: String = String(format: "%@?id=%@", scheme(FYScheme.News_Detail), "\(story.id!)") else {
+      guard let scheme_detail: String = scheme(FYScheme.News_Detail, params: ["id" : "\(story.id!)"]) else {
         return
       }
       

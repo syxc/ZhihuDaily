@@ -36,9 +36,26 @@ enum FYScheme: String {
 /* Custom scheme */
 let fyScheme = "fyzhihudaily"
 
-func scheme(scheme: FYScheme) -> String {
-  guard let scheme: String = String(format: "%@://%@", fyScheme, scheme.raw) else {
-    return ""
+func scheme(scheme: FYScheme, params: Dictionary<String, String>? = nil) -> String {
+  var string: String = ""
+  if params != nil && params?.count > 0 {
+    var paramString = ""
+    if params?.count == 1 {
+      for key in params!.keys {
+        paramString += "\(key)=\(params![key]!)"
+      }
+    } else {
+      for key in params!.keys {
+        paramString += "\(key)=\(params![key]!)&"
+      }
+      if paramString.hasSuffix("&") {
+        paramString = String(paramString.characters.dropLast())
+      }
+    }
+    string = String(format: "%@://%@?%@", fyScheme, scheme.raw, paramString)
+  } else {
+    string = String(format: "%@://%@", fyScheme, scheme.raw)
   }
-  return scheme
+  return string
 }
+

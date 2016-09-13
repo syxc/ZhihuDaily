@@ -155,7 +155,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
   func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
     if url.scheme == fyScheme {
-      log.info("url.scheme=\(url.absoluteString), url.host=\(url.host!), url.query=\(url.query)")
+      log.info("url.scheme=\(url.absoluteString), url.host=\(url.host), url.path=\(url.path), url.query=\(url.query)")
       
       guard let host = url.host else {
         return false

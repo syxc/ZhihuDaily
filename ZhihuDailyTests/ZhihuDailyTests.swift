@@ -32,4 +32,23 @@ class ZhihuDailyTests: XCTestCase {
       // Put the code you want to measure the time of here.
     }
   }
+  
+  func testScheme() {
+    let string0 = scheme(FYScheme.News_Detail)
+    print("\n------ string0=\(string0) ------\n")
+    
+    let string1 = scheme(FYScheme.News_Detail, params: nil)
+    print("\n------ string1=\(string1) ------\n")
+    
+    let string2 = scheme(FYScheme.News_Detail, params: ["id" : "1234"])
+    print("\n------ string2=\(string2) ------\n")
+    
+    let string3 = scheme(FYScheme.News_Detail, params: ["id" : "1234", "content" : "abc123"])
+    print("\n------ string3=\(string3) ------\n")
+    
+    assert(string0 == "fyzhihudaily://news_detail")
+    assert(string0 == string1)
+    assert(string2 == "fyzhihudaily://news_detail?id=1234")
+    assert(string3 == "fyzhihudaily://news_detail?id=1234&content=abc123")
+  }
 }
