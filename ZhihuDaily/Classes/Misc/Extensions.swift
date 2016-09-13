@@ -52,10 +52,12 @@ extension String {
     return self.characters.count
   }
   
+  /// Localized String
   var localized: String {
     return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: "")
   }
   
+  /// Localized String with comment
   public func localizedStringWithComment(comment: String) -> String {
     return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: self, comment: comment)
   }
