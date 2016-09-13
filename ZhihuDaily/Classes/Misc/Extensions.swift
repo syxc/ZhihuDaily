@@ -25,6 +25,12 @@ extension NSObject {
     print("\n--- Doesn’t contain a object ---\n")
     return ""
   }
+  
+  /// Perform selector after delay in swift
+  public func callSelectorAsync(selector: Selector, object: AnyObject?, delay: NSTimeInterval) -> NSTimer {
+    let timer = NSTimer.scheduledTimerWithTimeInterval(delay, target: self, selector: selector, userInfo: object, repeats: false)
+    return timer
+  }
 }
 
 // MARK: - String
