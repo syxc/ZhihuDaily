@@ -11,6 +11,10 @@ import UIKit
 import MBProgressHUD
 import ChameleonFramework
 
+///--------------------------------
+/// @name Foundation
+///--------------------------------
+
 // MARK: - NSObject
 
 extension NSObject {
@@ -23,6 +27,37 @@ extension NSObject {
   }
 }
 
+// MARK: - String
+
+extension String {
+  var ns: NSString {
+    return self as NSString
+  }
+  
+  var pathExtension: String? {
+    return ns.pathExtension
+  }
+  
+  var lastPathComponent: String? {
+    return ns.lastPathComponent
+  }
+  
+  var length: Int {
+    return self.characters.count
+  }
+  
+  var localized: String {
+    return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: "")
+  }
+  
+  public func localizedStringWithComment(comment: String) -> String {
+    return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: self, comment: comment)
+  }
+}
+
+///--------------------------------
+/// @name UIKit
+///--------------------------------
 
 // MARK: - UIColor
 
@@ -39,7 +74,6 @@ extension UIColor {
     return HexColor("#000000", 0.80);
   }
 }
-
 
 // MARK: - UIApplication
 
@@ -60,7 +94,6 @@ extension UIApplication {
   }
 }
 
-
 // MARK: - UINavigationController
 
 extension UINavigationController {
@@ -76,7 +109,6 @@ extension UINavigationController {
     return (self.topViewController?.prefersStatusBarHidden())!
   }
 }
-
 
 // MARK: - UIViewController
 
@@ -95,7 +127,6 @@ extension UIViewController {
     statusBar.backgroundColor = color
   }
 }
-
 
 // MARK: - UIView
 
@@ -119,7 +150,6 @@ extension UIView {
   }
 }
 
-
 // MARK: - UITableView
 
 extension UITableView {
@@ -134,7 +164,6 @@ extension UITableView {
   }
 }
 
-
 // MARK: - UITableViewCell
 
 extension UITableViewCell {
@@ -143,26 +172,5 @@ extension UITableViewCell {
    */
   public func hideSeparatorLine() {
     self.separatorInset = UIEdgeInsets(top: 0, left: self.bounds.width, bottom: 0, right: 0)
-  }
-}
-
-
-// MARK: - String
-
-extension String {
-  var ns: NSString {
-    return self as NSString
-  }
-  
-  var pathExtension: String? {
-    return ns.pathExtension
-  }
-  
-  var lastPathComponent: String? {
-    return ns.lastPathComponent
-  }
-  
-  var length: Int {
-    return characters.count
   }
 }

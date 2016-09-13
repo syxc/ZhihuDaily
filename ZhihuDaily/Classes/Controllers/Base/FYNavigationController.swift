@@ -58,7 +58,6 @@ UIGestureRecognizerDelegate, UINavigationControllerDelegate {
     return super.popToViewController(viewController, animated: animated)
   }
   
-  
   // MARK: UINavigationControllerDelegate
   
   func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {

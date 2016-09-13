@@ -37,5 +37,4 @@ class StoryCell: UITableViewCell {
     let url = NSURL(string: story.images![0])
     itemImageView.sd_setImageWithURL(url, placeholderImage: UIImage(), completed: block)
   }
-  
 }

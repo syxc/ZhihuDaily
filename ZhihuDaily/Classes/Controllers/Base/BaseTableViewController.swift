@@ -86,7 +86,6 @@ class BaseTableViewController: UITableViewController {
     tableView.delegate = nil
   }
   
-  
   // MARK: - Table view data source
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -122,7 +121,6 @@ class BaseTableViewController: UITableViewController {
      // Hide the status
      tableView.mj_header.stateLabel.hidden = true */
   }
-  
   
   // MARK: MJRefresh
   
@@ -161,8 +159,7 @@ class BaseTableViewController: UITableViewController {
     tableView.mj_header.endRefreshing()
     tableView.mj_footer.endRefreshing()
   }
-  
-  
+    
   /**
    tableView.reloadData()
    */

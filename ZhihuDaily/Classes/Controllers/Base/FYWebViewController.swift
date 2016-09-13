@@ -72,7 +72,6 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
     }
   }
   
-  
   // MARK: - Setup
   
   private func setupWKWebView() {
@@ -91,7 +90,6 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
     progressView?.frame = CGRectMake(0, self.navigationController!.navigationBar.frame.size.height - progressView!.frame.size.height, self.view.frame.size.width, progressView!.frame.size.height)
     progressView?.autoresizingMask = [.FlexibleWidth, .FlexibleTopMargin]
   }
-  
   
   // MARK: - Load methods
   
@@ -115,7 +113,6 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
       })
     }
   }
-  
   
   // MARK: - Estimated Progress KVO (WKWebView)
   
@@ -145,7 +142,6 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
     }
   }
   
-  
   // MARK: - WKNavigationDelegate
   
   func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
@@ -171,7 +167,6 @@ class FYWebViewController: BaseViewController, WKNavigationDelegate, WKUIDelegat
   func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
     setNetworkActivityIndicatorVisible(false)
   }
-  
   
   // MARK: - WKUIDelegate
   

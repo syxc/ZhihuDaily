@@ -153,8 +153,8 @@ final class ProgressHUD: NSObject {
     hud.showAnimated(true, whileExecutingBlock: {
       // Async task, Run in background
       sleep(10)
-      }) {
-        hud.hide(true, afterDelay: self.statusDelay)
+    }) {
+      hud.hide(true, afterDelay: self.statusDelay)
     }
   }
   
@@ -180,5 +180,4 @@ final class ProgressHUD: NSObject {
     imageView.tintColor = tintColor
     return imageView
   }
-  
 }

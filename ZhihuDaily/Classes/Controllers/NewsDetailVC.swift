@@ -54,7 +54,6 @@ class NewsDetailVC: FYWebViewController {
     
   }
   
-  
   /**
    获取新闻详情
    

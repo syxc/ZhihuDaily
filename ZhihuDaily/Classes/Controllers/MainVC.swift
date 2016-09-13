@@ -19,7 +19,7 @@ class MainVC: BaseTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.title = NSLocalizedString("app_name", comment: "AppName")
+    self.navigationItem.title = "app_name".localized
     
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(self.searchTap))
     
@@ -40,7 +40,6 @@ class MainVC: BaseTableViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
   
   // MARK: Setup view
   
@@ -87,7 +86,6 @@ class MainVC: BaseTableViewController {
         log.error("error=\(error)")
     }
   }
-  
   
   // MARK: UITableViewDataSource
   
@@ -144,8 +142,7 @@ class MainVC: BaseTableViewController {
     
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
-  
-  
+    
   // MARK: Other methods
   
   func searchTap() {

@@ -88,7 +88,6 @@ class HomeTopBannerCell: UITableViewCell, XRCarouselViewDelegate {
     bannerView.describeArray = titleArray
   }
   
-  
   // MARK: XRCarouselViewDelegate
   
   func carouselView(carouselView: XRCarouselView!, clickImageAtIndex index: Int) {
