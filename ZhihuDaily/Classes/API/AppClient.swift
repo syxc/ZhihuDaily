@@ -114,6 +114,7 @@ internal extension AppClient {
   }
   
   func basicHeaders() -> Dictionary<String, String> {
+    /* Just test data */
     let app = "ZhihuDaily"
     let author = "syxc"
     let credentialData = "\(app):\(author)".dataUsingEncoding(NSUTF8StringEncoding)!
