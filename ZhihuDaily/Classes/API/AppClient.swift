@@ -29,7 +29,7 @@ public class AppClient: ZhihuAPI {
     self.setNetworkActivityIndicatorVisible()
     
     return Promise { fulfill, reject in
-      Alamofire.request(.GET, url)
+      Alamofire.request(.GET, url, headers: basicHeaders())
         .validate()
         .responseJSON { response in
           switch response.result {
@@ -55,7 +55,7 @@ public class AppClient: ZhihuAPI {
     self.setNetworkActivityIndicatorVisible()
     
     return Promise { fulfill, reject in
-      Alamofire.request(.GET, url)
+      Alamofire.request(.GET, url, headers: basicHeaders())
         .validate()
         .responseJSON { response in
           switch response.result {
@@ -81,7 +81,7 @@ public class AppClient: ZhihuAPI {
     self.setNetworkActivityIndicatorVisible()
     
     return Promise { fulfill, reject in
-      Alamofire.request(.GET, url)
+      Alamofire.request(.GET, url, headers: basicHeaders())
         .validate()
         .responseJSON { response in
           switch response.result {
@@ -111,6 +111,15 @@ internal extension AppClient {
   
   func requestURL(url: String?) -> String {
     return String(format: "%@%@", baseUrl, url!)
+  }
+  
+  func basicHeaders() -> Dictionary<String, String> {
+    let app = "ZhihuDaily"
+    let author = "syxc"
+    let credentialData = "\(app):\(author)".dataUsingEncoding(NSUTF8StringEncoding)!
+    let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+    let headers = ["Authorization": "Basic \(base64Credentials)"]
+    return headers
   }
   
   func setNetworkActivityIndicatorVisible(visible: Bool = true) {
