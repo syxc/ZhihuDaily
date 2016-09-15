@@ -11,7 +11,7 @@ def pods
   pod 'Device', '~> 1.0.3'
   pod 'SDWebImage', '~>3.8'
   pod 'ChameleonFramework/Swift'
-  pod 'SwiftyUserDefaults'
+  pod 'SwiftyUserDefaults', '2.2.1'
   pod 'MJRefresh'
   pod 'FYLogger'
 end

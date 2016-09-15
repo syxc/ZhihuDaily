@@ -42,7 +42,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 1.1)
   - PromiseKit (= 3.5.0)
   - SDWebImage (~> 3.8)
-  - SwiftyUserDefaults
+  - SwiftyUserDefaults (= 2.2.1)
 
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
@@ -57,6 +57,6 @@ SPEC CHECKSUMS:
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SwiftyUserDefaults: 7abdba50a50ea0c18ee8903af3c88e4c1cb8448d
 
-PODFILE CHECKSUM: e01cc56c754d3cd44ac2a98dfe45504cdaa80dc3
+PODFILE CHECKSUM: b67d410c5db8d2f525f03a481c2594316076f275
 
 COCOAPODS: 1.0.1
