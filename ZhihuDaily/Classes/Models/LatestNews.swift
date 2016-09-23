@@ -11,7 +11,7 @@ import ObjectMapper
 
 /// 最新消息
 struct LatestNews {
-  var date: String!
+  var date: String?
   
   var stories: [Story]?
   

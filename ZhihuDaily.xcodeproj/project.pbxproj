@@ -486,6 +486,7 @@
 				TargetAttributes = {
 					4CB6F0651C12035D00E7EEA3 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 8249NC4RLM;
 					};
 					4CB6F0741C12035D00E7EEA3 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -792,6 +793,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8249NC4RLM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZhihuDaily/Vendor",
@@ -814,6 +816,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 8249NC4RLM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZhihuDaily/Vendor",
