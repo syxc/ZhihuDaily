@@ -4,10 +4,10 @@ PODS:
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - Device (1.0.3)
-  - FYLogger (0.81)
+  - FYLogger (0.81.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.12)
-  - ObjectMapper (1.4.0)
+  - ObjectMapper (1.5.0)
   - OMGHTTPURLRQ (3.2.0):
     - OMGHTTPURLRQ/RQ (= 3.2.0)
   - OMGHTTPURLRQ/FormURLEncode (3.2.0)
@@ -36,7 +36,7 @@ DEPENDENCIES:
   - Alamofire (= 3.5.0)
   - ChameleonFramework/Swift
   - Device (~> 1.0.3)
-  - FYLogger
+  - FYLogger (= 0.81.1)
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh
   - ObjectMapper (~> 1.1)
@@ -48,15 +48,15 @@ SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Device: bcf333c7c497edabe6df9560fd64f1e255d45b2b
-  FYLogger: 21844850378dc8c47460ad71aa278e8b026b6fdc
+  FYLogger: 0e89307e4cad08b3a02af4aa1b6ce6c34f3b77f6
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
+  ObjectMapper: 386645adca9d9d23b95eda43090b09d66444cf14
   OMGHTTPURLRQ: 1e54807cb7d5dbb506926e53498e1e9ac5720c79
   PromiseKit: 3a8a529c0571f8c2c423dba0897ff39bc060bf92
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SwiftyUserDefaults: 7abdba50a50ea0c18ee8903af3c88e4c1cb8448d
 
-PODFILE CHECKSUM: b67d410c5db8d2f525f03a481c2594316076f275
+PODFILE CHECKSUM: 7eeb21867047bcfba7040e9a8e566a321e1caca2
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

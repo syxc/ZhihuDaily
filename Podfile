@@ -12,8 +12,8 @@ def pods
   pod 'SDWebImage', '~>3.8'
   pod 'ChameleonFramework/Swift'
   pod 'SwiftyUserDefaults', '2.2.1'
+  pod 'FYLogger', '0.81.1'
   pod 'MJRefresh'
-  pod 'FYLogger'
 end
 
 target 'ZhihuDaily' do
