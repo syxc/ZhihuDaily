@@ -185,8 +185,11 @@ extension AppDelegate {
     let pairs = query.componentsSeparatedByString("&")
     for pair in pairs {
       let elements = pair.componentsSeparatedByString("=")
-      let key = elements[0].stringByRemovingPercentEncoding
-      let val = elements[1].stringByRemovingPercentEncoding
+      if elements.count < 2 {
+        continue
+      }
+      let key = elements.first!.stringByRemovingPercentEncoding
+      let val = elements.last!.stringByRemovingPercentEncoding
       dict.setObject(val ?? "", forKey: key ?? "")
     }
     return dict
